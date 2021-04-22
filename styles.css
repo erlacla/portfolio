@@ -1,0 +1,19 @@
+header {
+    background-color: #92C9B1;
+    text-align: center;
+    height: 90px;
+}
+textarea {
+    width:800px;
+    height: 250px;
+    background-color: lightyellow;
+}
+h1 {
+    color: #4F759B;
+}
+ul {
+    display: table;
+    margin: 0 auto;
+    padding: 30px;
+  }
+  
