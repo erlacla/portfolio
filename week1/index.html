@@ -62,6 +62,47 @@
             <li>
                 To show to user in javaScript use a section and .innerHTML. To get stuff from input box use .value.
             </li>
+            <li>
+                "ECMAScript 6 (or ECMAScript 2015) is the newest version of the ECMAScript standard and has
+                remarkably improved parameter handling in JavaScript."
+
+                "The rest parameter has the same syntax as the spread operator, but instead of expanding an array
+                into parameters, it collects parameters and turns them into an array."
+                Example:
+                function myFunction(...options) {
+                return options;
+                }
+                myFunction('a', 'b', 'c'); // ["a", "b", "c"]
+            </li>
+            <li>
+                Spread Operator (...) same???
+                Rest parameter (the triple dots): function logArguments(a, ...params) {
+
+                "The rest parameter is not without its limitations. For example, it must be the last argument;
+                otherwise, a syntax error will occur and only one rest parameter is allowed in the function declaration"
+            </li>
+            <li>
+                " You can even perform operations in the function declaration:"
+                function myFunction(a, b = ++a, c = a*b) {
+                console.log(c);
+                }
+                myFunction(5); // 36
+
+            </li>
+            <li>
+                PASSING ARGUMENTS BY VALUE
+                var a = 5;
+                function increment(a) {
+                a = ++a;
+                console.log(a);
+                }
+                increment(a); // 6
+                console.log(a); // 5
+                
+                Here, modifying the argument inside the function has no effect on the original value. So, when
+                the variable is logged from outside the function, the printed value is still 5.
+            </li>
+
         </ul>
 
 
