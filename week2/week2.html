@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 2 Coding</title>
+</head>
+
+<body>
+    <h3>Input a number to sum up:</h3>
+    <input type="text" id="input">
+    <button onclick="numbersUp()" type="button">Click Me!</button>
+    <div id="output"></div>
+    <h3>Input a number to add to the first:</h3>
+    <input type="text" id="adding">
+    <button onclick="adding()" type="button">+</button>
+<div id="totalOutput"></div>
+<h3>Input two numbers to multiply:</h3>
+<input type="text" id="m1">
+<input type="text" id="m2">
+<button onclick="multiply()" type="button">x</button>
+<div id="outputProduct"></div>
+
+<h3>Input two numbers to divide:</h3>
+<input type="text" id="d1">
+<input type="text" id="d2">
+<button onclick="divide()" type="button">/</button>
+<div id="outputQuotient"></div>
+    
+    
+    
+    
+    <script>
+        function numbersUp() {
+            let user = document.getElementById("input").value;
+             let sum = 0;
+            if (!isNaN(user)) {
+                for (let i = 1; i <= user; i++) {
+                    sum += i;
+                }  
+               
+            }
+          document.getElementById("output").innerHTML = sum;   
+        }
+
+        function adding() {
+            let fnumber = parseInt(document.getElementById("input").value);
+            let snumber = parseInt(document.getElementById("adding").value);
+            let total = fnumber + snumber;
+            document.getElementById("totalOutput").innerHTML = total;
+        }
+
+ let multiply = x => {
+    let m1 = parseInt(document.getElementById("m1").value);
+    let m2 = parseInt(document.getElementById("m2").value);
+    let product = m1 * m2;
+    document.getElementById("outputProduct").innerHTML = product;
+}
+
+let quotient = function divide(d1, d2) {
+    return d1 / d2;
+};
+console.log(quotient);
+    let d1 = parseInt(document.getElementById("d1").value);
+    let d2 = parseInt(document.getElementById("d2").value);
+    document.getElementById("outputQuotient").innerHTML = quotient;
+    </script>
+</body>
+
+</html>
