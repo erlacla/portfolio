@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Week 1 Notes</title>
+
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+
+<body>
+
+  <header>
+    <h1>Week 2 Notes and Code</h1>
+  </header>
+
+  <main>
+    <p>
+      Write a JavaScript function that reverse a number. <br>
+      Example x = 32243;
+      Expected Output : 34223
+    </p>
+    <label for="rnumber">Type a number to reverse</label>
+    <input id="rnumber" type="text">
+    <button onclick="numberRev()">Reverse now</button>
+    <div id="reversedNumber"></div>
+
+    <ul>
+      <li>3 types of functions are function expressions, function declarations, and arrow functions.
+        Function expressions have a const or let to assign the function to a value. They also need a
+        semicolon at the end. They can assign an anonymous function to a variable or a named function
+        to a variable. Function declarations declare a variable to be a function. Arrow functions
+        do the same as a declaration just with less typing. They are always anonymous and best used for
+        short functions that don't have many statements in the body.
+      </li>
+      <li>A function can have many parameters or none at all.</li>
+      <li>There are 6 primitive data types: strings, numbers, booleans, symbols, null, and undefined.</li>
+      <li>Non-primitive data types are: arrays, functions, and objects.</li>
+      <li>If you don't use let or const, a variable will be global.</li>
+      <li>Type coercion = when JavaScript tries to change a string to a number automatically. </li>
+      <li>Verbose = unneeded, too wordy. DRY = don't repeat yoursef.</li>
+      <li>Ternary operator is: ? can be used in place of an if else block. <br> condition ? (code for true)
+        : (code for false)</li>
+      <li>For - of loop can be used for arrays. <br> for(const value of array) { console.log(value); }</li>
+      <li>Rest operator = function rest(...args) { return args; }</li>
+
+    </ul>
+  </main>
+  <script>
+
+    function numberRev() {
+      input = document.getElementById("rnumber").value;
+      input = input.split("").reverse().join("");
+      document.getElementById("reversedNumber").innerHTML = input;
+    }
+
+  </script>
+</body>
+
+</html>
