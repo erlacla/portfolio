@@ -9,32 +9,38 @@
 </head>
 
 <body>
+    <h3>Input a number:</h3>
+    <input type="text" id="numberinput">
+    <button onclick="getNumber()" type="button">Click me</button>
+    <div id="outputNumber"></div>
+
     <h3>Input a number to sum up:</h3>
     <input type="text" id="input">
     <button onclick="numbersUp()" type="button">Add up!</button>
     <div id="output"></div>
     
     <h3>Input a number to add to the first:</h3>
-    <input type="text" id="adding">
+    <input type="text" id="adding1">
+    <input type="text" id="adding2">
     <button onclick="adding()" type="button">+</button>
     <div id="totalOutput"></div>
    
-    <h3>Input two numbers to multiply:</h3>
-    <input type="text" id="m1">
-    <input type="text" id="m2">
+    <h3>Input two numbers to calculate:</h3>
+    <input type="text" id="n1">
+    <input type="text" id="n2">
+    <button onclick="subtract()" type="button">-</button>
     <button onclick="multiply()" type="button">x</button>
-    <div id="outputProduct"></div>
-
-    <h3>Input two numbers to divide:</h3>
-    <input type="text" id="d1">
-    <input type="text" id="d2">
     <button onclick="divide()" type="button">/</button>
-    <div id="outputQuotient"></div>
+    <div id="outputAnswer"></div>
 
 
 
 
     <script>
+        function getNumber() {
+            let userNumber = parseInt(document.getElementById("numberinput").value);
+            document.getElementById("outputNumber").innerHTML = `You entered ${userNumber}`;
+        }
         function numbersUp() {
             let user = document.getElementById("input").value;
             let sum = 0;
@@ -47,8 +53,8 @@
         }
 
         function adding() {
-            let fnumber = parseInt(document.getElementById("input").value);
-            let snumber = parseInt(document.getElementById("adding").value);
+            let fnumber = parseInt(document.getElementById("adding1").value);
+            let snumber = parseInt(document.getElementById("adding2").value);
             let total = fnumber + snumber;
             document.getElementById("totalOutput").innerHTML = total;
         }
