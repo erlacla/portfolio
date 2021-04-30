@@ -11,38 +11,39 @@
 <body>
     <h3>Input a number to sum up:</h3>
     <input type="text" id="input">
-    <button onclick="numbersUp()" type="button">Click Me!</button>
+    <button onclick="numbersUp()" type="button">Add up!</button>
     <div id="output"></div>
+    
     <h3>Input a number to add to the first:</h3>
     <input type="text" id="adding">
     <button onclick="adding()" type="button">+</button>
-<div id="totalOutput"></div>
-<h3>Input two numbers to multiply:</h3>
-<input type="text" id="m1">
-<input type="text" id="m2">
-<button onclick="multiply()" type="button">x</button>
-<div id="outputProduct"></div>
+    <div id="totalOutput"></div>
+   
+    <h3>Input two numbers to multiply:</h3>
+    <input type="text" id="m1">
+    <input type="text" id="m2">
+    <button onclick="multiply()" type="button">x</button>
+    <div id="outputProduct"></div>
 
-<h3>Input two numbers to divide:</h3>
-<input type="text" id="d1">
-<input type="text" id="d2">
-<button onclick="divide()" type="button">/</button>
-<div id="outputQuotient"></div>
-    
-    
-    
-    
+    <h3>Input two numbers to divide:</h3>
+    <input type="text" id="d1">
+    <input type="text" id="d2">
+    <button onclick="divide()" type="button">/</button>
+    <div id="outputQuotient"></div>
+
+
+
+
     <script>
         function numbersUp() {
             let user = document.getElementById("input").value;
-             let sum = 0;
+            let sum = 0;
             if (!isNaN(user)) {
                 for (let i = 1; i <= user; i++) {
                     sum += i;
-                }  
-               
+                }
             }
-          document.getElementById("output").innerHTML = sum;   
+            document.getElementById("output").innerHTML = sum;
         }
 
         function adding() {
@@ -52,20 +53,20 @@
             document.getElementById("totalOutput").innerHTML = total;
         }
 
- let multiply = x => {
-    let m1 = parseInt(document.getElementById("m1").value);
-    let m2 = parseInt(document.getElementById("m2").value);
-    let product = m1 * m2;
-    document.getElementById("outputProduct").innerHTML = product;
-}
+        let multiply = x => {
+            let m1 = parseInt(document.getElementById("m1").value);
+            let m2 = parseInt(document.getElementById("m2").value);
+            let product = m1 * m2;
+            document.getElementById("outputProduct").innerHTML = product;
+        }
 
-let quotient = function divide(d1, d2) {
-    return d1 / d2;
-};
-console.log(quotient);
-    let d1 = parseInt(document.getElementById("d1").value);
-    let d2 = parseInt(document.getElementById("d2").value);
-    document.getElementById("outputQuotient").innerHTML = quotient;
+        let quotient = function divide(d1, d2) {
+            return d1 / d2;
+        };
+        console.log(quotient);
+        let d1 = parseInt(document.getElementById("d1").value);
+        let d2 = parseInt(document.getElementById("d2").value);
+        document.getElementById("outputQuotient").innerHTML = quotient;
     </script>
 </body>
 
