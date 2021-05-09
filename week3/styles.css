@@ -1,0 +1,19 @@
+#week3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 10px;
+    
+  }
+  h2 {
+    background-color: #80cbc4;
+    border: 1px solid #fff;
+    padding: 40px;
+    font-size: 30px;
+    text-align: center;
+  }
+  span {
+    background-color: #80cbc4;
+    border: 1px solid #fff;
+    padding: 40px;
+    text-align: center; 
+  }
