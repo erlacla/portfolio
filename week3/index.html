@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Week 1 Notes</title>
+
+    <link rel="stylesheet" href="../styles.css" />
+</head>
+
+<body>
+
+    <header>
+        <h1>Week 2 Notes and Code</h1>
+    </header>
+
+    <main>
+        <a href="/">Return to main menu</a>
+<br>
+        <a href="ninja/events.html">Event Listener activity</a>
+        <br>
+        <a href="teamActivity.html">Team Activity</a>
+        <br>
+        <ul>
+            <li>The function that is a property of an object is called a method.</li>
+            <li>The "this" keyword is used in a function to refer to the object being used.</li>
+            <li>Object literals have properties which are key-value pairs separated by commas, encased in curly
+                braces. They are similar to a JSON object only JSON objects have double quote marks and no
+                functions.
+            </li>
+            <li>To create a new object literal do this: let variableName = {};</li>
+            <li>The parse() method turns a JSON string into a javaScript object.</li>
+            <li>The stringify() method turns a javaScript object into a JSON string. </li>
+            <li>Node lists are like arrays but are not arrays.</li>
+            <li>You can change a node list into an array with Array.from() method or with a spread operator :
+                let a = [...document.images];
+            </li>
+            <li>Use document.querySelector(''); to grab the first css selector.</li>
+            <li>Use document.querySelectorAll(''); to grab all references in the node list of elements.</li>
+            <li>Example for class name: document.querySelector('.cups');</li>
+            <li>Example for ID name: document.querySelector('#cups');</li>
+            <li>Select last list item: document.querySelector('li:last-child');</li>
+            <li>Select list with ID of cups: document.querySelector('ul#cups');</li>
+            <li>To insert a new node use insertBefore() method. It needs two parameters: first - the new node,
+                second - the node to go before.
+            <li>There is no insertAfter method available at this time.</li>
+            <li>To replace some text you can use: h1.replaceChild(newText, oldText);</li>
+            <li>you can not use innerHTML to insert a script for security reasons.</li>
+            <li>Node lists that are returned by the document.getElementByClassName and
+                document.getElementByTagName methods are live collections.</li>
+            <li>EventListeners allow multiple functions to be attached to separate events.</li>
+            <li>Add an EventListener like this: document.body.addEventListener('click',doSomething);</li>
+            </li>
+        </ul>
+    </main>
+</body>
+
+</html>
