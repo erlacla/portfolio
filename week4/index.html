@@ -10,13 +10,13 @@
 <body>
 
     <header>
-        <h1>Week 2 Notes and Code</h1>
+        <h1>Week 4 Notes and Code</h1>
     </header>
 
     <main>
         <a href="/">Return to main menu</a>
         <br>
-        <a href="ninja/events.html">Event Listener activity</a>
+        <a href="heroform/hero.html">Hero form activity</a>
         <br>
         <a href="teamActivity.html">Team Activity</a>
         <br>
@@ -75,52 +75,7 @@ using the DOM to create a <div> element that contains the error message and has 
             </li>
         </ul>
 
-        <h1>Mountains</h1>
-
-        <div id="mountains"></div>
-
-        <script>
-            const MOUNTAINS = [
-                { name: "Kilimanjaro", height: 5895, place: "Tanzania" },
-                { name: "Everest", height: 8848, place: "Nepal" },
-                { name: "Mount Fuji", height: 3776, place: "Japan" },
-                { name: "Vaalserberg", height: 323, place: "Netherlands" },
-                { name: "Denali", height: 6168, place: "United States" },
-                { name: "Popocatepetl", height: 5465, place: "Mexico" },
-                { name: "Mont Blanc", height: 4808, place: "Italy/France" }
-            ];
-
-            function buildTable(data) {
-                let table = document.createElement("table");
-
-                let fields = Object.keys(data[0]);
-                let headRow = document.createElement("tr");
-                fields.forEach(function (field) {
-                    let headCell = document.createElement("th");
-                    headCell.appendChild(document.createTextNode(field));
-                    headRow.appendChild(headCell);
-                });
-                table.appendChild(headRow);
-
-                data.forEach(function (object) {
-                    let row = document.createElement("tr");
-                    fields.forEach(function (field) {
-                        let cell = document.createElement("td");
-                        cell.appendChild(document.createTextNode(object[field]));
-                        if (typeof object[field] == "number") {
-                            cell.style.textAlign = "right";
-                        }
-                        row.appendChild(cell);
-                    });
-                    table.appendChild(row);
-                });
-
-                return table;
-            }
-
-            document.querySelector("#mountains")
-                .appendChild(buildTable(MOUNTAINS));
-        </script>
+        
     </main>
 </body>
 
