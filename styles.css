@@ -9,11 +9,48 @@ textarea {
     background-color: lightyellow;
 }
 h1 {
-    color: #4F759B;
+    font-family: 'Amatic SC', cursive;
+    font-weight: bold;
+    font-size: 30px;
 }
 ul {
     display: table;
     margin: 0 auto;
     padding: 30px;
+    font-size: 25px;
   }
- 
+img {
+    width: 100%;
+}
+ li {
+     padding: 10px;
+ }
+
+ @media only screen and (min-width: 60em) {
+    #hero {
+        position: relative;
+    }
+    #display {
+        position: absolute;
+        top: 1em;
+         right: 2em;
+         font-size: 20px;
+         color: #fff;
+    }
+    #scripture {
+        width: 30%;
+        padding: 20px;
+        position: absolute;
+        top: -3em;
+        color: #fff;
+    }
+    a {
+        color: #fff;
+    }
+h1 {
+    color: #fff;
+    font-size: 50px;
+}
+
+
+ }
