@@ -7,7 +7,7 @@ const player2 = "O";
 
 let player = player1;
 
-function changePlayer (click) {
+function changePlayer (touchend) {
     touchend.target.innerHTML = player;
     if (player === player1) player = player2;
     else player = player1;
