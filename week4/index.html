@@ -20,61 +20,93 @@
         <br>
         <a href="teamactivity/tictactoe.html">Tic Tac Toe Team Activity</a>
         <br>
+        <div id="error"></div>
+        <form id="form" name="form" action="/" method="get">
+              
+              <div class="form-box">
+                <label for="name">Name</label>
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  required="required"
+                />
+              </div>
+              <div class="form-box">
+                <label for="password">Password</label>
+                <input
+                  type="password"
+                  name="password"
+                  id="password"
+                />
+              </div>
+              <button type="submit">Submit</button>
+    </form>
+    <br>
         <ul>
             <li>document.forms will return an HTML collection of all the forms on a page.</li>
             <li>form.elements will return an HTML collection of all the elements contained within a form.</li>
-            <li>Object literals have properties which are key-value pairs separated by commas, encased in curly
-                braces. They are similar to a JSON object only JSON objects have double quote marks and no
-                functions.
+            <li>The form submit() method submits the form automatically, but using this method wont trigger
+                the form to submit.
             </li>
-            <li></li>
-            <li>The parse() method turns a JSON string into a javaScript object.</li>
-            <li>The stringify() method turns a javaScript object into a JSON string. </li>
-            <li>Node lists are like arrays but are not arrays.</li>
-            <li>You can change a node list into an array with Array.from() method or with a spread operator :
-                let a = [...document.images];
+            <li>You can use an image as a submit button.</li>
+            <li>The form reset empties the form. Not advised.</li>
+            <li>Use VScode to change all of one instance of a word by clicking it and then F2.</li>
+            <li>The default for input is text.</li>
+            <li>For type password characters are concealed.</li>
+            <li>Type checkbox is checked-true and unchecked-false.</li>
+            <li>Use radio type for only one choice permitted.</li>
+            <li>Type hidden is not shown in the browser but is shown in HTML/dev tools.</li>
+            <li>Input type file will let user upload a file.</li>
+            <li>It is possible for a user to modify JavaScript code and bypass validation rules so it's 
+                advisable to use client-side and server-side validation before saving on the database.
             </li>
-            <li>Use document.querySelector(''); to grab the first css selector.</li>
-            <li>Use document.querySelectorAll(''); to grab all references in the node list of elements.</li>
-            <li>Example for class name: document.querySelector('.cups');</li>
-            <li>Example for ID name: document.querySelector('#cups');</li>
-            <li>Select last list item: document.querySelector('li:last-child');</li>
-            <li>Select list with ID of cups: document.querySelector('ul#cups');</li>
-            <li>To insert a new node use insertBefore() method. It needs two parameters: first - the new node,
-                second - the node to go before.
-            <li>There is no insertAfter method available at this time.</li>
-            <li>To replace some text you can use: h1.replaceChild(newText, oldText);</li>
-            <li>you can not use innerHTML to insert a script for security reasons.</li>
-            <li>Node lists that are returned by the document.getElementByClassName and
-                document.getElementByTagName methods are live collections.</li>
-            <li>EventListeners allow multiple functions to be attached to separate events.</li>
-            <li>Add an EventListener like this: document.body.addEventListener('click',doSomething);</li>
+            <li>JavaScript should be used to give feedback about ny errors BEFORE the form is submitted.</li>
+            <li>Disable the submit button if the form isn't valid.</li>
+            <li>OOP = Object oriented programming</li>
+            <li>OOP: 1 encapsulation 2 polymorphism 3 inheritance</li>
+            <li>Encapsulation = all inner workings hidden inside. The user sees on or off button. clean.</li>
+            <li>Polymorphism = can use the same process for different objects.</li>
+            <li>Inheritance = take features of one object and then add some new features.</li>
+            <li>Object oriented languages (Java and Ruby) are known as class-based languages.</li>
+            <li>JavaScript is a prototype-based language</li>
+            <li>Each new object created with Dice() will inherit the same properties and methods defined
+                in the function
             </li>
+            <li>The easiest way to create new is with literal syntax.</li>
+            <li>New object   const literalObject = {};</li>
+            <li>New array   const literalArray = [1, 2, 3];</li>
+            <li>Syntax sugar = language sweeter for human consumption, more clear, concise, preferred.</li>
+            <li>Object constructor property = returns function that created it.</li>
+            <li>Static method for class declarations = only work on the main class, not on instances of
+                the class
+            </li>
+            <li>The "this" in the prototype always refers to the instance that actually calls the method.</li>
+            <li>Use getPrototypeOf() instead of dunder proto.</li>
+            <li>The difference between an objects own properties and prototype properties is prototype
+                properties are shared by every instance of the class.
+            </li>
+            <li>The prototype property is live. If you change the prototype ALL in th class are changed automatically.</li>
+            <li>Use class declarations instead of constructor functions.</li>
+            <li>Own properties take precedence over prototype property.</li>
+            <li>Never use arrays or objects as default value in prototype.</li>
+            <li>Monkey-patching = Adding methods to the prototype of built-in objects like string, number, array.</li>
+            <li>To avid shallow-copy use mixin() function.</li>
+            <li>Rest parameter and spread operator look the same but do different jobs.</li>
+            <li>If "This" loses scope, Use "that" or self or _this instead.</li>
+            <li>Use for-of instead of forEach()</li>
+            <li>Keep classes "skinny"</li>
+            <li>Organize thousands of lines of code by using separate files.</li>
+            <li>jQuery is the most popular JavaScript library</li>
+            <li>jQuery can help reduce code and helps with old browsers</li>
+            <li>Vanilla JavaScript = JavaScript with no help from libraries</li>
+            <li>Libraries can add to file size and they can go away.</li>
+            <li>You can make your own library of functions</li>
+            <li>Don't use a library because you don't understand JavaScript</li>
+            <li>All code in modules are in strict mode</li>
+            <li>Module keyword = export  and  import</li>
+            <li>MV* frameworks : Aurelia, Angular, Ember</li>
 
-
-
-           <div id="error"></div>
-            <form id="form" name="form" action="/" method="get">
-                  
-                  <div class="form-box">
-                    <label for="name">Name</label>
-                    <input
-                      type="text"
-                      name="name"
-                      id="name"
-                      required="required"
-                    />
-                  </div>
-                  <div class="form-box">
-                    <label for="password">Password</label>
-                    <input
-                      type="password"
-                      name="password"
-                      id="password"
-                    />
-                  </div>
-                  <button type="submit">Submit</button>
-        </form>
     </main>
     <script src="form.js"></script>
 </body>
