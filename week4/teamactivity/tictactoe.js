@@ -7,8 +7,8 @@ const player2 = "O";
 
 let player = player1;
 
-function changePlayer () {
-    touchend.target.innerHTML = player;
+function changePlayer (click) {
+    click.target.innerHTML = player;
     if (player === player1) player = player2;
     else player = player1;
 }
@@ -19,15 +19,14 @@ function clear() {
     }
 }
 
-board.addEventListener("touchend", changePlayer);
-reset.addEventListener("touchend", clear);
+board.addEventListener("click", changePlayer);
+reset.addEventListener("click", clear);
 
 
 // one.addEventListener('mouseover', highlight);
 // one.addEventListener('mouseout', highlight);
 // two.addEventListener('mouseover', highlight);
 // two.addEventListener('mouseout', highlight);
-
 
 // function highlight(event){
 //     event.target.classList.toggle('highlight');
