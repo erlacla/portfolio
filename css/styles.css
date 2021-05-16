@@ -29,6 +29,9 @@ img {
      line-height: 40px;
      font-size: 20px;
  }
+ h4 {
+     margin: 20px;
+ }
 
  @media only screen and (min-width: 60em) {
     #hero {
