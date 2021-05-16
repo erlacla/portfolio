@@ -18,7 +18,7 @@
         <br>
         <a href="heroform/hero.html">Hero form activity</a>
         <br>
-        <a href="teamActivity.html">Team Activity</a>
+        <a href="teamactivity/tictactoe.html">Tic Tac Toe Team Activity</a>
         <br>
         <ul>
             <li>document.forms will return an HTML collection of all the forms on a page.</li>
@@ -50,33 +50,30 @@
             <li>EventListeners allow multiple functions to be attached to separate events.</li>
             <li>Add an EventListener like this: document.body.addEventListener('click',doSomething);</li>
             </li>
-            <li>QUESTION
-                We can improve the usability of the form further by giving instant feedback, instead of waiting for the form to be submitted. This can be achieved by adding the event listener directly to the input field that will fire when the user presses a key (using the keyup event). The feedback can then be inserted inside the label element of the input field, along with a class of error for more direct feedback. Add the following code to main.js :
-
-const label = form.querySelector('label');
-const error = document.createElement('div');
-error.classList.add('error');
-error.textContent = '! Your name is not allowed to start with X.';
-label.append(error);
-function validateInline() {
-    const heroName = this.value.toUpperCase();
-    if(heroName.startsWith('X')){
-    error.style.display = 'block';
-    } else {
-    error.style.display = 'none';
-    }
-}
-For this technique to work, we actually add the error message to the HTML in the JavaScript file, 
-regardless of whether the error has been made or not. This is done in the first five lines above, 
-using the DOM to create a <div> element that contains the error message and has a class of 'error'. 
-    It’s then added to the <label> element using the append() method. The trick here is that the element 
-        will not be visible as it will start with a style declaration of display: none; . This will be 
-        updated dynamically as the keyup event fires.
-            </li>
-        </ul>
-
-        
+           <div id="error"></div>
+            <form id="form" name="form" action="/" method="get">
+                  
+                  <div class="form-box">
+                    <label for="name">Name</label>
+                    <input
+                      type="text"
+                      name="name"
+                      id="name"
+                      required="required"
+                    />
+                  </div>
+                  <div class="form-box">
+                    <label for="password">Password</label>
+                    <input
+                      type="password"
+                      name="password"
+                      id="password"
+                    />
+                  </div>
+                  <button type="submit">Submit</button>
+        </form>
     </main>
+    <script src="form.js"></script>
 </body>
 
 </html>
