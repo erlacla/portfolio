@@ -1,0 +1,20 @@
+#grid {
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    grid-template-rows: 100px 100px 100px;
+}
+#one, #four, #seven, #two, #five, #eight {
+border-right: 1px solid #000;
+}
+
+#four, #five, #six, #seven, #eight, #nine {
+    border-top: 1px solid #000;
+}
+.highlight {
+    background-color: rgb(47, 142, 155);
+}
+div {
+    font-size: 70px;
+    padding-left: 25px;
+    padding-top: 10px;
+}
