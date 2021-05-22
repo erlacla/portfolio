@@ -33,6 +33,18 @@ img {
      margin: 20px;
  }
 
+ form {
+     display: inline-block;
+     border: 5px solid #92C9B1;
+     padding: 20px;
+     max-width: 50%;
+ }
+
+ input {
+     padding: 5px;
+     margin: 10px;
+ }
+
  @media only screen and (min-width: 60em) {
     #hero {
         position: relative;

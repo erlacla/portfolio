@@ -20,6 +20,10 @@ form.addEventListener("submit", (e) => {
     if (password.value === "password") {
         messages.push("Password can not be password")
     }
+    
+    if (password != password2) {
+        messages.push("\nThe Passwords did not match. Enter password again")
+    }
 
     if (messages.length > 0) {
         e.preventDefault()
