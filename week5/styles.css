@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    font-size: 16px;
+    font-family: "Montserrat", sans-serif;
+    width: 100%;
+    min-height: 100%;
+}
+body {
+    padding: 20px;
+    background-color: aquamarine;
+}
+section {
+    background-color: bisque;
+    width: 90%;
+    max-width: 700px;
+    margin: auto;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+.button {
+    width: 15%;
+    min-width: 48px;
+    min-height: 48px;
+    color: white;
+    border: 2px solid black;
+    border-radius: 10px;
+    outline: none;
+}
+.button:hover {
+    cursor: pointer;
+} 
+.button:hover,
+.button:focus {
+    filter: brightness(120%);
+    box-shadow: 4px 2px 5px black;
+}
+.newItemEntry {
+    position: sticky;
+    top: 0;
+    margin-bottom: 1rem;
+    padding: 0.75rem;
+}
+form {
+    display: flex;
+    justify-content: space-between;
+}
+#away {
+    position: absolute;
+    left: -1000000px;
+}
+input[type="text"] {
+    width: 80%;
+    font-size: 1.25rem;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 0.75rem;
+    outline: none;
+}
+input[type="text"]:focus,
+input[type="text"]:hover {
+    box-shadow: 4px 2px 5px black;
+}
+#addition {
+    font-size: 1.25rem;
+    background-color: green;
+    padding: 0.75rem;
+    font-size: 1.5rem;
+}
+.listContainer {
+    min-height: 60vh;
+    padding: 0.75rem;
+}
+.listTitle {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+#clearItems {
+    font-size: 1rem;
+    background-color: red;
+    padding: 0 0.1rem;
+    margin-bottom: 0.5rem;
+}
+hr {
+    width: 100%;
+}
+.item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 1rem;
+}
+input[type="checkbox"] {
+    text-align: center;
+    width: 2.5rem;
+    min-width: 48px;
+    height: 2.5rem;
+    min-height: 48px;
+    cursor: pointer;
+    margin-right: 1.5rem;
+}
+input[type="checkbox"]:focus + label {
+    text-decoration: underline;
+}
+label {
+    font-size: 1.1rem;
+}
