@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="app.css" />
+</head>
+
+<body>
+    <header>
+        <h1 tabindex="0">To Do List</h1>
+
+    </header>
+
+    <div id="fullList">
+        <section>
+            <div class="listTitle"></div>
+
+            <div id="listItems">
+                <div class="item">
+                    <input type="checkbox" id="1" tabindex="0">
+                    <label for="1">eat</label>
+                </div>
+                <div class="item">
+                    <input type="checkbox" id="2" tabindex="0">
+                    <label for="2">sleep</label>
+                </div>
+            </div>
+
+            <p id="confirmation" class="confirmation" aria-live="assertive"></p>
+        </section>
+
+        <section class="newItemEntry">
+            <form id="itemEntryForm">
+                <label id="away" for="newItem">Enter a new to do item</label>
+                <input class="enterNew" type="text" id="newItem" size="30" autocomplete="off" placeholder="Add Item"
+                    tabindex="0">
+                <button id="addition" class="button" title="Add new item" aria-label="Add new item to list"
+                    tabindex="0">Add to list</button>
+                <div>
+                    <ul>
+                        <li>
+                            <a href="#/" tabindex="0">All</a>
+                        </li>
+                        <li>
+                            <a href="#/" tabindex="0">Active</a>
+                        </li>
+                        <li>
+                            <a href="#/" tabindex="0">Completed</a>
+                        </li>
+                    </ul>
+                </div>
+                <button id="clearItems" class="button" title="Clear the list" aria-label="Remove all the items"
+                    tabindex="0">Clear list</button>
+            </form>
+            <span id="counter"></span>
+        </section>
+    </div>
+    </main>
+    <script src="main.js" type="module"></script>
+</body>
+
+</html>

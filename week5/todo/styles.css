@@ -11,7 +11,7 @@ html, body {
 }
 body {
     padding: 20px;
-    background-color: aquamarine;
+    background-color: rgb(194, 255, 217);
 }
 section {
     background-color: bisque;
@@ -108,4 +108,9 @@ input[type="checkbox"]:focus + label {
 }
 label {
     font-size: 1.1rem;
+}
+
+.confirmation {
+    position: absolute;
+    left: -100000px;
 }

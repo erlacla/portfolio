@@ -54,6 +54,23 @@ img {
      margin: 10px;
  }
 
+#todobtn {
+    text-align: center;
+    margin-top: 40px;
+}
+
+#todobtn a{
+    font-size: 4vw;
+    border: 4px solid black;
+    text-decoration: none;
+    color: black;
+    padding: 20px;
+    box-shadow: 4px 2px 5px black;
+    word-wrap: break-word;
+}
+
+
+
  @media only screen and (min-width: 60em) {
     #hero {
         position: relative;
