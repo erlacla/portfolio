@@ -2,6 +2,7 @@ export default class ToDoItem {
     constructor() {
         this._id = null;
         this._item = null;
+        this._check = false;
     }
 
     getId() {
@@ -19,4 +20,5 @@ export default class ToDoItem {
     setItem(item) {
         this._item = item;
     }
+
 }

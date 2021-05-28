@@ -23,11 +23,11 @@
 
             <div id="listItems">
                 <div class="item">
-                    <input type="checkbox" id="1" tabindex="0">
+                    <input class="checked" type="checkbox" id="1" tabindex="0">
                     <label for="1">eat</label>
                 </div>
                 <div class="item">
-                    <input type="checkbox" id="2" tabindex="0">
+                    <input class="checked" type="checkbox" id="2" tabindex="0">
                     <label for="2">sleep</label>
                 </div>
             </div>
@@ -42,16 +42,19 @@
                     tabindex="0">
                 <button id="addition" class="button" title="Add new item" aria-label="Add new item to list"
                     tabindex="0">Add to list</button>
+
+<div>
+    <span id="totalCount"></span>
+</div>
+
                 <div>
                     <ul>
+                        
                         <li>
-                            <a href="#/" tabindex="0">All</a>
+                            <button id="active" tabindex="0">Active</button>
                         </li>
                         <li>
-                            <a href="#/" tabindex="0">Active</a>
-                        </li>
-                        <li>
-                            <a href="#/" tabindex="0">Completed</a>
+                            <button id="completed" tabindex="0">Completed</button>
                         </li>
                     </ul>
                 </div>
