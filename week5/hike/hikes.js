@@ -40,7 +40,9 @@ const hikeList = [
       this.parentElement = document.getElementById(elementId);
       // we need a back button to return back to the list. This will build it and hide it. When we need it we just need to remove the 'hidden' class
       this.backButton = this.buildBackButton();
+      console.log(elementId);
     }
+
     // why is this function necessary?  hikeList is not exported, and so it cannot be seen outside of this module. I added this in case I ever need the list of hikes outside of the module. This also sets me up nicely if my data were to move. I can just change this method to the new source and everything will still work if I only access the data through this getter.
     getAllHikes() {
       return hikeList;
@@ -59,7 +61,7 @@ const hikeList = [
     }
     // show one hike with full details in the parentElement
     showOneHike(hikeName) {
-      const hike = this.getHikeByName(hikeName);
+    const hike = this.getHikeByName(hikeName);
     this.parentElement.innerHTML = '';
     this.parentElement.appendChild(renderOneHikeFull(hike));
     // show the back button
@@ -74,12 +76,18 @@ const hikeList = [
           // why currentTarget instead of target?
           this.showOneHike(e.currentTarget.dataset.name);
         });
+        child.addEventListener('click', e => {
+          this.showOneHike(e.currentTarget.dataset.name);
+        });
       });
     }
     buildBackButton() {
       const backButton = document.createElement("button");
       backButton.innerHTML = '&lt;- All Hikes';
       backButton.addEventListener('touchend', () => {
+        this.showHikeList();
+      });
+      backButton.addEventListener('click', () => {
         this.showHikeList();
       });
       backButton.classList.add('hidden');
