@@ -11,7 +11,6 @@ export default class Comment {
   }
 
   addComment() {
-    
     const commentObj = {
       hike: document.querySelector("#hike").value,
       comment: document.querySelector("#comment").value,
@@ -19,9 +18,9 @@ export default class Comment {
     };
     console.log(commentObj);
     this.comments.push(commentObj);
-  }
-  setLocalStorage(content) {
-    localStorage.setItem("this.comments", JSON.parse(content));
+    }
+  
+    setLocalStorage(content) {
+    localStorage.setItem(key, JSON.stringify(content));
   }
 }
-
