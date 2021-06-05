@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 5</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+</head>
+
+<body>
+    <header>
+        <h1>Week 7 Notes and Code</h1>
+    </header>
+
+    <main>
+        <a href="../">Return to main menu</a>
+        <a href="hike/index.html">Hikes Team Activity</a>
+
+        <h4>Enter some words to reverse:</h4>
+        <input id="reverse"></input>
+        <button id="gobtn">Go</button>
+        <span id="output"></span>
+
+        <ul>
+            <li>CORS = a HTTP-header based mechanism that allows a server to indicate any other origins than its own
+                from which a browser should permit loading of resources.</li>
+            <li>CORS makes a “preflight” request to the server hosting the cross-origin resource, to check that the
+                server will permit the actual request.</li>
+            <li>The call() and apply() methods are very similar except the arguments of the apply() function are
+                provided as an array, even if there is only one argument square.apply(null, [4])</li>
+            <li>IFFE = Immediately Invoked Function Expression, useful for keeping any variables wrapped up within the
+                scope of the function. Use parentheses.</li>
+            <li>JavaScript is a single-threaded environment, which means only one piece of code will ever be processed
+                at a time. </li>
+            <li>a callback can be created that’s invoked when the event happens. This means that the code is able to run
+                out of order, or asynchronously.</li>
+            <li>const promise = new Promise( (resolve,reject) => { <br>
+                const n = dice.roll(); <br>
+                setTimeout(() => {<br>
+                (n > 1) ? resolve(n) : reject(n); <br>
+                }, n*1000); <br>
+                });
+            </li>
+            <li>using promises: <br>
+
+                login(userName) <br>
+                .then(user => getPlayerInfo(user.id)) <br>
+                .then(info => loadGame(info)) <br>
+                .catch( throw error)</li>
+            <li>A closure() function saves variable values</li>
+            <li>Generators are used by putting an * after function and then you can pause the function and use next() to
+                step through the function as needed.</li>
+            <li>Pure functions: only use values given as arguments with no outside values used. They dont change any
+                other outside data (no side-effects). Given the same value they will always return the same data. They
+                must have at least one argument and they must have a return value. </li>
+            <li>In pure functions the return values can be cached (memoization).</li>
+            <li>Memoization is good for factorials and only work for pure functions. When used properly it can speed up
+                your code.</li>
+
+
+
+        </ul>
+
+
+
+
+
+    </main>
+    <script>
+
+
+        const gobtn = document.querySelector('#gobtn');
+        gobtn.addEventListener('click', () => {
+            const string = document.querySelector('#reverse').value;
+            output = string.split('').reverse().join('');
+            document.querySelector('#output').innerHTML = output;
+        });
+    </script>
+</body>
+
+</html>

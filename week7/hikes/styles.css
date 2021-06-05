@@ -1,0 +1,54 @@
+main {
+    display: block;
+  }
+  
+  h1 {
+    background-color: #224727;
+    color: #f4f6f6;
+    padding: 50px;
+    max-width: 100%;
+    text-align: center;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  h2 {
+    background-color: #224727;
+    color: #f4f6f6;
+    padding: 25px;
+    flex-basis: 100%;
+    text-align: center;
+  }
+  
+  div {
+    margin: 0 5%;
+    padding-left: 10px;
+  }
+  
+  img {
+    width: 300px;
+    height: 225px;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  @media only screen and (min-width: 600px) {
+    li {
+        display: flex;
+        flex-wrap: wrap;
+    }
+  
+    div {
+        max-width: 40%;
+    }
+  
+    div p {
+        width: 100px;
+    }
+  }
+  

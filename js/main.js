@@ -23,6 +23,10 @@ const links = [
     label: "Week 6 - To-Do App",
     url: "week6/index.html",
   },
+  {
+    label: "Week 7",
+    url: "week7/index.html",
+  },
 ];
 
 let i = 0;
