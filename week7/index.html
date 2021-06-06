@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Week 5</title>
+    <title>Week 7</title>
     <link rel="stylesheet" href="../css/styles.css" />
 </head>
 
@@ -17,6 +17,8 @@
     <main>
         <a href="../">Return to main menu</a>
         <a href="hikes/index.html">Hikes Team Activity</a>
+        <a href="cssBattle.html">CSS Battle Activity</a>
+        <a href="ajax.html">AJAX Activity</a>
 
         <h4>Enter some words to reverse:</h4>
         <input id="reverse"></input>
@@ -24,7 +26,7 @@
         <span id="output"></span>
 
         <ul>
-            <li>CORS = a HTTP-header based mechanism that allows a server to indicate any other origins than its own
+            <li>CORS = a HTTP-header can tell a server which other origins than its own
                 from which a browser should permit loading of resources.</li>
             <li>CORS makes a “preflight” request to the server hosting the cross-origin resource, to check that the
                 server will permit the actual request.</li>
@@ -58,8 +60,38 @@
             <li>In pure functions the return values can be cached (memoization).</li>
             <li>Memoization is good for factorials and only work for pure functions. When used properly it can speed up
                 your code.</li>
-
-
+            <li>AJAX (Asynchronous JavaScript and XML) = a technique that allows the web to communicate asynchronously with a server and it can update the page without reloading.</li>
+            <li>With AJAX data can be sent back anf forth in the background.</li>
+            <li>Usually an AJAX request is JSON data or a small fragment of text or HTML, not a whole webpage. </li>
+            <li>To practice AJAX request files from an external website that uses CORS to avoid the same-origin policy built into browsers.</li>
+            <li>AJAX is asynchronous because of callbacks.</li>
+            <li>JSON is the more common data over XML.</li>
+            <li>API (application programming interface) = a collection of methods that allows external access to another program or service (like the weather api).</li>
+            <li>Fetch API = fetch('https://example.com/data') .then   and  .catch</li>
+            <li>fetch() returns a promise. The promise is resolved when the response is received from the website. the catch is if theres an error.</li>
+            <li>Response Interface - response object has properties: statusText, headers, url, redirected, type. </li>
+            <li>Response objects also contain many methods that return promises: redirect() ((not supported??)), text(), blob(), json(), </li>
+            <li>Request Interface - request object can be used as an argument</li>
+            <li>Request objects are created using the Request() constructor. Has properties: url (required!), method (GET), headers, mode (choose CORS), cache, credentials, redirect.</li>
+            <li>HTTP verbs = HTTP methods</li>
+            <li>5 most common verbs for resources on the web: GET, POST, PUT, PATCH, DELETE. Default is GET.</li>
+            <li>const request = new Request('https://example.com/data', {
+                method: 'GET',
+                mode: 'cors',
+                redirect: 'follow',
+                cache: 'no-cache'
+            });</li>
+            <li>OR without creating a Request object: fetch('https://example.com/data', {
+                method: 'GET',
+                mode: 'cors',
+                redirect: 'follow',
+                cache: 'no-cache'
+            })
+            .then( // do something with the response )
+            .catch( // handle any errors)</li>
+            <li>New headers = const headers = new Headers({ 'Content-Type': 'text/plain', 'Accept-Charset' : 'utf-8', 'Accept-Encoding':'gzip,deflate' })</li>
+            <li>Fetch API is a "living standard" right now. Changing and growing.</li>
+            <li>People use a library to take care of Ajax requests, usually jQuery.</li>
 
         </ul>
 

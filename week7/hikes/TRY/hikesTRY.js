@@ -122,9 +122,9 @@ function renderOneHikeLight(hike) {
 function renderOneHikeFull(hike) {
   const item = document.createElement("li");
   item.innerHTML = ` 
-    
-    <img src="${imgBasePath}${hike.imgSrc}" alt="${hike.imgAlt}">
     <h2>${hike.name}</h2>
+    <img src="${imgBasePath}${hike.imgSrc}" alt="${hike.imgAlt}">
+    
     <div>
         <h3>Distance</h3>
         <p>${hike.distance}</p>
