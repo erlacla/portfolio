@@ -1,57 +1,40 @@
+let i = 1;
+let url = `https://swapi.dev/api/people/?page=${i}`;
 const swList = document.querySelector("#apidata");
+const buttonsN = document.querySelector('#buttonsN');
+const buttonsP = document.querySelector('#buttonsP');
+console.log(url);
 
+//for(let i = 0; i <= 9; i++)
+buttonsN.addEventListener("click", () => {
+  i++;
+  getJson();
+});
+buttonsP.addEventListener("click", () => {
+    i--;
+    getJson();
+  });
 
-// let url = `https://swapi.dev/api/people/?page=1`;
-function getJson(url) {
-  return fetch(url)
+function getJson() {
+   fetch(url)
     .then(response => {
-      if (!response.ok) {
-        throw new Error('Something went wrong!');
+      if (response.ok) {
+          console.log('GOOD:', response);
+          return response.json();
       } else {
-       return response.json();
+          throw new Error ('Something went wrong!');
+          console.log("Response not good.")
       }
     })
-    .catch(error => {
-      console.log(error)
-    });
-}
-function getPeople(url) {
-  return getJson(url);
-}
+    .then(jsonObject => {
+      console.log(jsonObject);
+      swList.innerHTML = jsonObject.results
+        .map((item) => `<li>${item.name}</li>`)
+        .join("");
+        console.log(url);
+    })
 
-function peopleList() {
-  swList.innerHTML = jsonObject.results
-    .map((item) => `<li>${item.name}</li>`)
-    .join("");
-  console.log(url);
+.catch(error => {
+    console.log('There was an error!')
+});
 };
-
-
-
-
-function showPeople(url = "https://swapi.dev/api/people/?page=1") {
-  getPeople(url).then(function (jsonObject) {
-    console.log(jsonObject);
-    const data = jsonObject.items;
-
-    if (data.next) {
-      const buttonsN = document.querySelector('#buttonsN');
-      buttonsN.addEventListener("click", () => {
-        showPeople(data.next);
-      });
-    }
-    if (data.previous) {
-      const buttonsP = document.querySelector('#buttonsP');
-      buttonsP.addEventListener("click", () => {
-        showPeople(data.previous);
-
-      });
-    }
-  })
-};
-
-
-
-
-
-
