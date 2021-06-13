@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 8</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+</head>
+
+<body>
+    <header>
+        <h1>Week 8 Notes and Code</h1>
+    </header>
+
+    <main>
+        <a href="../">Return to main menu</a>
+        <a href="hikes/index.html">Hikes Team Activity</a>
+        <a href="cssBattle.html">CSS Battle Activity</a>
+        <a href="ajax.html">AJAX Activity</a>
+
+        <span id="bike"></span>
+<hr>
+<canvas id="myCanvas" class="myCanvas" width="200" height="200">
+    Sorry! Your browser doesn’t support Canvas.
+</canvas>
+
+<canvas id="demo2" class="myCanvas" width="200" height="200">
+    Sorry! Your browser doesn’t support Canvas.
+</canvas>
+
+<canvas id="demo3" class="myCanvas" width="200" height="200">
+    Sorry! Your browser doesn’t support Canvas.
+</canvas>
+
+<canvas id="demo4" class="myCanvas" width="200" height="200">
+    Sorry! Your browser doesn’t support Canvas.
+</canvas>
+<button name="saveButton" id="saveButton">Save Drawing</button>
+
+<h2>Demo 6: Drawing an image to the canvas</h2>
+<canvas width="200" height="200" id="demo6" class="myCanvas">
+    Sorry! Your browser doesn't support Canvas.
+</canvas>
+<img src="html5.png" id="myImageElem">
+
+        <ul>
+            <li>transform: translate(45px, -45px);  kinda like using position: relative. Moves an <span id="scale">element</span> x from the left, and y from the top:</li>
+            <li>scale: scale(1) would leave the element the same size, scale(2) would double its proportions, scale(0.5) would halve them, and so on. Providing different values will distort the element, as you’d expect: transform: scale(1.5, 0.25);</li>
+            <li>Don't declare more than 1 transform. It will override the first.</li>
+            <li>Translation has no impact on the document flow</li>
+            <li>Skew: uses the x and y axis too. Try <span id="skew">me</span>.</li>
+            <li>The order of transform functions makes a difference. If you rotate before translating, your translate direction will be on the rotated axis</li>
+            <li>Transition-duration property: 0.2 seconds ( 0.2s ), or 200 milliseconds ( 200ms )   transition-duration: 0.2s;</li>
+            <li>200ms is generally considered the optimum time for a transition: anything slower will make the website seem slow</li>
+            <li>Negative time delay: start partway through the animation. </li>
+            <li>h1 span {
+                transition: transform 0.2s ease-out 50ms;
+            }</li>
+            <li>If a delay is included, you must also include a duration, and the duration must precede the delay.</li>
+            <li>When using the all keyword, all the properties transition at the same rate, speed, and delay:
+
+                transition: all 0.2s ease-out 50ms;</li>
+            <li>@keyframes animation: first attach to element.</li>
+            <li>There are two keyterms― from and to ―which evaluate to 0% and 100% respectively. These values specify how far along the animation each keyframe is located.</li>
+            <li>Animation-name: Do not use key terms such as forwards , running , or alternate for the animation name.</li>
+            <li>Just because you can animate/transform/etc.., doesn’t mean you should. </li>
+
+
+        </ul>
+
+
+
+
+
+    </main>
+<script src="script.js"></script>
+</body>
+
+</html>
