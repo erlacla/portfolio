@@ -85,6 +85,21 @@ ul {
 .myCanvas {
     border: dotted 2px black;
 }
+.draganddrop .mc {
+    text-align: center; 
+}
+#cat, .content {
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#square {
+    margin: 100px;
+    width: 100px;
+    height: 100px;
+    background: #d16;
+}
 
  a {
      margin: 10px;

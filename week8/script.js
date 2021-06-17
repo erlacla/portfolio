@@ -98,33 +98,79 @@ function makeVideoOldTimey() {
     draw(video,context,canvas9);               
     }, false);  
 }
-function draw(video, context, canvas9) {
+
+function draw(video, context, canvas9) { 
     if (video.paused || video.ended) return false;
     
     drawOneFrame(video, context, canvas9);
+    
+    // Start over! 
+    setTimeout(function(){ draw(video, context, canvas9); }, 0); 
 }
+
 function drawOneFrame(video, context, canvas9){
-    // draw the video onto the canvas
     context.drawImage(video, 0, 0, canvas9.width, canvas9.height);
+    try {
     var imageData = context.getImageData(0, 0, canvas9.width, 
     canvas9.height);
-    var pixelData = imageData.data; 
-    // Loop through the red, green and blue pixels, 
-    // turning them grayscale
-    
-    var red, green, blue, greyscale;  
+    var pixelData = imageData.data;
     for (var i = 0; i < pixelData.length; i += 4) {
-    red = pixelData[i];
-    green = pixelData[i + 1];
-    blue = pixelData[i + 2];
-    //we'll ignore the alpha value, which is in position i+3
-        
-    grayscale = red * 0.3 + green * 0.59 + blue * 0.11;
-        
-    pixelData[i] = grayscale;
-    pixelData[i + 1] = grayscale;
-    pixelData[i + 2] = grayscale;
+        var red = pixelData[i];
+        var green = pixelData[i + 1];
+        var blue = pixelData[i + 2];
+        var grayscale = red * 0.3 + green * 0.59 + blue * 0.11;
+        pixelData[i] = grayscale;
+        pixelData[i + 1] = grayscale;
+        pixelData[i + 2] = grayscale;
     }
-            
-    context.putImageData(imageData, 0, 0); 
+    
+    imageData.data = pixelData;
+    context.putImageData(imageData, 0, 0);
+    } catch (err) {
+        canvas9.width = canvas9.width; 
+        context.clearRect(0,0,canvas9.width,canvas9.height);
+        canvas9.style.backgroundColor = "transparent"; 
+        context.fillStyle = "white"; 
+        context.textAlign = "left";
+        context.font = "18px LeagueGothic, Tahoma, Geneva, sans-serif"; 
+        context.fillText("There was an error rendering ", 10, 20);  
+    context.fillText("the video to the canvas.", 10, 40);
+    context.fillText("Perhaps you are viewing this page from", 10, 
+    70);
+    context.fillText("a file on your computer?", 10, 90);
+    context.fillText("Try viewing this page online instead.", 10, 
+    130); 
+    return false; 
+    }
 }
+
+var mice = document.querySelectorAll("#mouseContainer img");
+var mouse = null;
+for (var i=0; i < mice.length; i++) {
+    mouse = mice[i];
+    mouse.addEventListener('dragstart', function (event) {
+    // handle the dragstart event
+    });
+}
+mouse.addEventListener("dragstart", function (event) {
+    event.dataTransfer.setData("text/plain", this.id); 
+});
+var cat = document.getElementById("cat");
+cat.addEventListener("dragover", function(event) {
+    event.preventDefault();
+});
+cat.addEventListener("drop", function(event) {
+    var mouseHash = {
+    mouse1: 'NOMNOMNOM',
+    mouse2: 'Meow',
+    mouse3: 'Purrrrrr ...'
+   };
+var catHeading = document.getElementById('catHeading');
+var mouseID = event.originalEvent.dataTransfer.getData("text/plain");
+catHeading.innerHTML = mouseHash[mouseID];
+var mousey = document.getElementById(item);
+mousey.parentNode.removeChild(mousey);
+event.preventDefault();
+
+});
+

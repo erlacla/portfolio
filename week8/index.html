@@ -51,9 +51,38 @@
 <canvas width="320" height="240" id="canvasOverlay" class="myCanvas">
     Sorry! Your browser doesn't support Canvas.
 </canvas>
-<video src="ford-plane-takes-off.mp4" id="video"></video>
+<video src="ford-plane-takes-off.mp4" id="video" controls></video>
 
+<h2>SVG images</h2>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+    <circle cx="50" cy="50" r="25" fill="red"/>
+</svg>
 
+<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 200 200">
+    <desc>Drawing a rectangle</desc>
+        <rect x="10" y="10" width="100" height="100"  
+            fill="blue" stroke="red" stroke-width="3"  />  
+    
+</svg>
+
+<article id="ac3">
+    <h1>Wai-Aria? HAHA!</h1>
+    <h2 id="catHeading">Form Accessibility</h2>
+            
+    <img src="cat.png" alt="WAI-ARIA Cat" id="cat">
+            
+    <div class="content">
+    <p id="mouseContainer" class="mc">
+        <img src="computer-mouse-pic.png" 
+    alt="mouse treat" id="mouse1" draggable="true">
+        <img src="computer-mouse-pic.png"  
+    alt="mouse treat" id="mouse2" draggable="true">
+        <img src="computer-mouse-pic.png" 
+    alt="mouse treat" id="mouse3" draggable="true">
+    </p>
+    </div>
+    </article>
+   
         <ul>
             <li>transform: translate(45px, -45px);  kinda like using position: relative. Moves an <span id="scale">element</span> x from the left, and y from the top:</li>
             <li>scale: scale(1) would leave the element the same size, scale(2) would double its proportions, scale(0.5) would halve them, and so on. Providing different values will distort the element, as you’d expect: transform: scale(1.5, 0.25);</li>
@@ -75,7 +104,13 @@
             <li>There are two keyterms― from and to ―which evaluate to 0% and 100% respectively. These values specify how far along the animation each keyframe is located.</li>
             <li>Animation-name: Do not use key terms such as forwards , running , or alternate for the animation name.</li>
             <li>Just because you can animate/transform/etc.., doesn’t mean you should. </li>
-
+            <li>SVG = Scalable Vector Graphics</li>
+            <li>XML = eXtensible Markup Language</li>
+            <li>Since SVG is an XML file format, it’s more accessible to search engines than canvas.</li>
+            <li>Canvas allows for pixel manipulation</li>
+            <li>Canvas is much faster than SVG</li>
+            <li>Canvas has immediate mode and SVG has retained mode.</li>
+            <li><a href="https://www.thehtml5herald.com/">The Herold Website</a></li>
 
         </ul>
 
