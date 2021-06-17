@@ -7,15 +7,19 @@ console.log(url);
 
 //for(let i = 0; i <= 9; i++)
 buttonsN.addEventListener("click", () => {
+  // let i = 1;
   i++;
-  getJson();
+  let url = `https://swapi.dev/api/people/?page=${i}`;
+  getJson(url);
 });
+
 buttonsP.addEventListener("click", () => {
-    i--;
-    getJson();
+  i--;
+  let url = `https://swapi.dev/api/people/?page=${i}`;
+  getJson(url);
   });
 
-function getJson() {
+function getJson(url) {
    fetch(url)
     .then(response => {
       if (response.ok) {
