@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proposal Outline</title>
+</head>
+<body>
+    <h1>Proposal Outline</h1>
+    <h1>NASA Astronomy Picture Of The Day</h1>
+<h2 id="title"></h2>
+<h3>Date: <span id="date"></span></h3>
+<img id="pic" src="" alt="NASA Picture Of The Day" width="100%">
+<p id="explanation"></p>
+<script>
+    //const urlKey = "https://api.nasa.gov/planetary/apod?api_key=1d2L4pOf0fwCvwuplc4TaYuftbdLOWapwWwYOqVW"
+    //const url = "https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&date=1995-06-16"
+    const url = "https://api.le-systeme-solaire.net/rest/bodies/";
+ 
+
+    function getJson(url) {
+   fetch(url)
+    .then(response => {
+      if (response.ok) {
+          console.log('GOOD:', response);
+          return response.json();
+      } else {
+          throw new Error ('Something went wrong!');
+          console.log("Response not good.")
+      }
+    })
+    .then(jsonObject => {
+      console.log(jsonObject);
+    //   swList.innerHTML = jsonObject.results
+    //     .map((item) => `<li>${item.name}</li>`)
+    //     .join("");
+    //     console.log(url);
+    })
+
+.catch(error => {
+    console.log('There was an error!')
+});
+};
+getJson(url);
+
+// const url = "https://api.nasa.gov/planetary/apod?api_key=";
+// const api_key = config.NASA_API_KEY;
+
+// const fetchNASAData = async () => {
+//   try {
+//     const response = await fetch(`${url}${api_key}`);
+//     const data = await response.json();
+//     console.log("NASA APOD data", data);
+//     displayData(data);
+//   } catch (error) {
+//     console.log(error);
+//   }
+// };
+
+// const displayData = (data) => {
+//   document.getElementById("title").textContent = data.title;
+//   document.getElementById("date").textContent = data.date;
+//   document.getElementById("picture").src = data.hdurl;
+//   document.getElementById("explanation").textContent = data.explanation;
+// };
+
+// fetchNASAData();
+
+</script>
+</body>
+
+</html>
