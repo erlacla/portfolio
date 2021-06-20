@@ -15,48 +15,52 @@
     </header>
 
     <main class="margin">
-    <div class="center">
-        <p>My team helped me fixed the API activity from last week! <a href="../week8/api.html">API Activity</a></p>
-        <a href="../">Return to main menu</a>
-        <a href="drumSet.html">Drum Set Activity</a>
-        <a href="factors.html">Web Workers API Activity</a>
-        <a href="websocket/websocket.html">Websocket Echo Activity</a>
-    </div>
-
+        <div class="center">
+            <p>My team helped me fixed the API activity from last week! <a href="../week8/api.html">API Activity</a></p>
+            <a href="../">Return to main menu</a>
+            <a href="drumSet.html">Drum Set Activity</a>
+            <a href="factors.html">Web Workers API Activity</a>
+            <a href="websocket/websocket.html">Websocket Echo Activity</a>
+        </div>
+        <a href="proposal.pdf">Proposal for Final Application</a>
         <div id='square'></div>
 
-        <canvas id='canvas' width='400' height='400'>Sorry, but your browser does not support the canvas element</canvas>
-       
+        <canvas id='canvas' width='400' height='400'>Sorry, but your browser does not support the canvas
+            element</canvas>
+
         <ul>
-           <li>In a browser the global object is the window object.</li>
-           <li>BOM = Browser object model.</li>
-           <li>In BOM we find the browser being used to view a page, the dimensions of the screen it is viewed on, and which pages have been visited before the current page.</li>
+            <li>In a browser the global object is the window object.</li>
+            <li>BOM = Browser object model.</li>
+            <li>In BOM we find the browser being used to view a page, the dimensions of the screen it is viewed on, and
+                which pages have been visited before the current page.</li>
             <li>Every browser window, tab, popup, frame, and iframe has a window object.</li>
             <li>Node.js probably won’t have a window object, but will still have a global object.</li>
-            <li>Global variables are  variables created without using the const, let, or var keywords. </li>
-            <li>parseInt() and isNaN() are actually methods of the global object, which in a browser environment makes them methods of the window object.</li>
-            <li>alert , confirm() , and prompt() are all methods of the window object, and open dialogs that halt the execution of the program.</li>
-            <li>You should refer to global variables without using the window object: window.x === x; UNLESS you need to check if a global variable has been defined.</li>
+            <li>Global variables are variables created without using the const, let, or var keywords. </li>
+            <li>parseInt() and isNaN() are actually methods of the global object, which in a browser environment makes
+                them methods of the window object.</li>
+            <li>alert , confirm() , and prompt() are all methods of the window object, and open dialogs that halt the
+                execution of the program.</li>
+            <li>You should refer to global variables without using the window object: window.x === x; UNLESS you need to
+                check if a global variable has been defined.</li>
             <li>Method of the Number object: Number.parseInt(4.2);
-                << 4
-                Number.isNaN(4.2);
-                << false</li>
+                << 4 Number.isNaN(4.2); << false</li>
             <li>Find out browser and os: window.navigator.userAgent
                 << "Mozilla/5.0 (Macintosh;</li>
             <li>Location: window.location.href 
-                << "https://www.sitepoint.com/premium/books/javascript-novice-to-ninja"</li>
+                << " https://www.sitepoint.com/premium/books/javascript-novice-to-ninja"</li>
             <li>ice-to-ninja"
-            <li>The search property returns a string that starts with a “?” followed by the query string parameters. </li>
+            <li>The search property returns a string that starts with a “?” followed by the query string parameters.
+            </li>
             <li>window.history.go(1); // goes forward 1 page
                 window.history.go(0); // reloads the current page
                 window.history.go(-1); // goes back 1 page</li>
             <li>window.screen.height
-                << 1024
-                window.screen.width
-                << 1280</li>
-            <li>Cookies take the form of a text file that contain a list of name/value pairs separated by semicolons, and can be used for personalizing a user’s browsing experience, storing user preferences, keeping track of user choices (such as a shopping cart), authentication and tracking users.</li>
+                << 1024 window.screen.width << 1280</li>
+            <li>Cookies take the form of a text file that contain a list of name/value pairs separated by semicolons,
+                and can be used for personalizing a user’s browsing experience, storing user preferences, keeping track
+                of user choices (such as a shopping cart), authentication and tracking users.</li>
             <li>To read the cookie (see the current contents): document.cookie:
-                << "name=Batman; hero=true; city=Gotham"</li>
+                << "name=Batman; hero=true; city=Gotham" </li>
             <li>Cookies expire by default when the page is closed but you can set an expiration date if you want.</li>
 
             <li>For security reasons access to cookies is limited. </li>
@@ -65,35 +69,47 @@
             <li>You can use the alerts ID to stop the alert before it's finished.</li>
             <li>setInterval() makes the command repeat again and again after the time you set.</li>
             <li>Avoid using the "this" keyword for timing methods.</li>
-            <li>It is typically better to use CSS for any animation effects, although there may be times when JavaScript might be the better solution.</li>
-            <li>data- attribute: start with data-, Contain only lowercase letters, numbers, hyphens, dots, colons or underscores, and include an optional string value. data-powers = 'flight superSpeed'
-                data-rating = '5' 
-                data-dropdown 
-                data-user = 'DAZ' 
+            <li>It is typically better to use CSS for any animation effects, although there may be times when JavaScript
+                might be the better solution.</li>
+            <li>data- attribute: start with data-, Contain only lowercase letters, numbers, hyphens, dots, colons or
+                underscores, and include an optional string value. data-powers = 'flight superSpeed'
+                data-rating = '5'
+                data-dropdown
+                data-user = 'DAZ'
                 data-max-length = '32'</li>
             <li> div id='hero' data-powers='flight superSpeed'>
                 Superman
-            div
-            const superman = document.getElementById('hero');
-            const powers = superman.dataset.powers;
-             'flight superSpeed'</li>
-            <li>Notice that the data- prefix is dropped. To access the attribute, powers is used as if it’s a property of the dataset object. If a data- attribute’s name contains hyphens, they are replaced with camel-case notation, so data-max-length would be accessed using dataset.maxLength .</li>
+                div
+                const superman = document.getElementById('hero');
+                const powers = superman.dataset.powers;
+                'flight superSpeed'</li>
+            <li>Notice that the data- prefix is dropped. To access the attribute, powers is used as if it’s a property
+                of the dataset object. If a data- attribute’s name contains hyphens, they are replaced with camel-case
+                notation, so data-max-length would be accessed using dataset.maxLength .</li>
             <li>localStorage.setItem('name', 'Walter White');</li>
-            <li>localStorage.getItem('name'); 
-                 "Walter White"</li>
-            <li>Or localStorage.name = 'Heisenberg'; 
-                console.log(localStorage.name); 
-                 "Heisenberg";</li>
+            <li>localStorage.getItem('name');
+                "Walter White"</li>
+            <li>Or localStorage.name = 'Heisenberg';
+                console.log(localStorage.name);
+                "Heisenberg";</li>
             <li>localStorage.removeItem('name'); OR delete localStorage.name;</li>
-            <li>To clear everything:  localStorage.clear();</li>
-            <li>The Web Storage API provides a useful way of storing various types of information on a user’s computer without the restriction of cookies. </li>
-            <li>The Geolocation API provides a useful interface for adding location-based information to a website or application.</li>
-            <li>Web workers: const worker = new Worker('task.js'); This function takes the name of another JavaScript file as an argument. It allows javascript to continue running in the background so the website will continue to function without stopping. </li>
-            <li>The keyword self is used to refer to the worker. worker.postMessage('Hello');     self.postMessage('Finished');  worker.addEventListener('message', (event) => {
+            <li>To clear everything: localStorage.clear();</li>
+            <li>The Web Storage API provides a useful way of storing various types of information on a user’s computer
+                without the restriction of cookies. </li>
+            <li>The Geolocation API provides a useful interface for adding location-based information to a website or
+                application.</li>
+            <li>Web workers: const worker = new Worker('task.js'); This function takes the name of another JavaScript
+                file as an argument. It allows javascript to continue running in the background so the website will
+                continue to function without stopping. </li>
+            <li>The keyword self is used to refer to the worker. worker.postMessage('Hello');
+                self.postMessage('Finished'); worker.addEventListener('message', (event) => {
                 console.log(event.data);
-            }, false);</li>
-            <li>Service Workers API: This allows you to take alternative action if the network is offline, and effectively create app-like offline experiences.</li>
-            <li>Websocket is a new protocol that allows two-way communication with a server – also known as push messaging. This means that a connection is kept open and responses are ‘pushed’ to the client as soon as they are received.</li>
+                }, false);</li>
+            <li>Service Workers API: This allows you to take alternative action if the network is offline, and
+                effectively create app-like offline experiences.</li>
+            <li>Websocket is a new protocol that allows two-way communication with a server – also known as push
+                messaging. This means that a connection is kept open and responses are ‘pushed’ to the client as soon as
+                they are received.</li>
             <li>Notification API allows you to display notifications on the user's system.</li>
             <li>You can use the <audio> and <video> elements to add sounds or videos to the webpage.</li>
             <li>Shims and polyfills for users that don't have the most up-to-date browser.</li>
@@ -106,7 +122,7 @@
 
 
     </main>
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
