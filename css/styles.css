@@ -146,7 +146,7 @@ transform: translateY(-7px);
     word-wrap: break-word;
 }
 
-.center {
+.center a {
     display: block;
     text-align: center;
 }
