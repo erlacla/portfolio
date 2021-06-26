@@ -12,3 +12,6 @@ li {
     text-decoration: dashed;
     margin: 30px;
 }
+li:hover {
+    color: blue;
+}

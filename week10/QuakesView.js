@@ -32,5 +32,7 @@ export default class QuakesView {
         } else return `<li>${item[0]}: ${item[1]}</li>`;
       })
       .join('');
+      
   }
+  
 }
