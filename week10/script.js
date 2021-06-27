@@ -1,10 +1,13 @@
-const email = document.getElementById("mail");
 
-email.addEventListener("input", function (event) {
-  if (email.validity.typeMismatch) {
-    email.setCustomValidity("I am expecting an e-mail address!");
+
+
+const emai = document.getElementById("mail");
+
+emai.addEventListener("input", function (event) {
+  if (emai.validity.typeMismatch) {
+    emai.setCustomValidity("I am expecting an e-mail address!");
   } else {
-    email.setCustomValidity("");
+    emai.setCustomValidity("");
   }
 });
 

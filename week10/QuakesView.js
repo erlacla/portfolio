@@ -25,6 +25,9 @@ export default class QuakesView {
   renderQuake(quake, element) {
     const quakeProperties = Object.entries(quake.properties);
     // for the provided quake make a list of each of the properties associated with it. Then append the list to the provided element. Notice the first line of this method. Object.entries() is a slick way to turn an object into an array so that we can iterate over it easier!
+    // const backButton = document.createElement('button');
+    // backButton.innerHTML = 'Back';
+
     element.innerHTML = quakeProperties
       .map(item => {
         if (item[0] === 'time' || item[0] === 'updated') {
@@ -32,7 +35,10 @@ export default class QuakesView {
         } else return `<li>${item[0]}: ${item[1]}</li>`;
       })
       .join('');
-      
+      // element.insertBefore(backButton, element.childNodes[0]); 
+      // backButton.addEventListener('click', e => {
+      //   renderQuakeList(quakeList, listElement);
+      // });
   }
   
 }

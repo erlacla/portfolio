@@ -2,54 +2,123 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Week 10</title>
-    <link rel="stylesheet" href="../css/styles.css" />
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Week 10</title>
+  <link rel="stylesheet" href="../css/styles.css" />
 </head>
 
 <body>
-    <header>
-        <h1>Week 10 Notes and Code</h1>
-    </header>
+  <header>
+    <h1>Week 10 Notes and Code</h1>
+  </header>
 
-    <main class="margin">
-        <div class="center">
-            
-            <a href="../">Return to main menu</a>
-            <a href="quakes.html">Earth Quake Tracker Activity</a>
-        </div>
-            
-        <form>
-            <label for="mail">I would like you to provide me with an e-mail address:</label>
-            <input type="email" id="mail" name="mail">
-            <button>Submit</button>
-          </form>
-          
-          <form novalidate>
-            <p>
-              <label for="mail">
-                <span>Please enter an email address:</span>
-                <input type="email" id="mail" name="mail" required minlength="8">
-                <span class="error" aria-live="polite"></span>
-              </label>
-            </p>
-            <button>Submit</button>
-          </form>
+  <main>
+    <div>
 
-
-        <ul>
-            <li></li>
-
-        </ul>
+      <a href="../">Return to main menu</a>
+      <a href="quakes.html">Earth Quake Tracker Activity</a>
+    </div>
 
 
 
+    <form>
+      <label for="mail">I would like you to provide me with an e-mail address:</label>
+      <input type="email" id="mail" name="mail">
+      <button>Submit</button>
+    </form>
+
+    <form novalidate>
+      <legend>No Validate Attribute ---</legend>
+      <p>
+        <label for="mail">
+          <span>Please enter an email address:</span>
+          <input type="email" id="mail" name="mail" required minlength="8">
+          <span class="error" aria-live="polite"></span>
+        </label>
+      </p>
+      <button>Submit</button>
+    </form>
+
+    <form>
+      <p>
+      <fieldset>
+        <legend>Do you have a driver's license?<abbr title="This field is mandatory" aria-label="required">*</abbr>
+        </legend>
+        <!-- While only one radio button in a same-named group can be selected at a time,
+                     and therefore only one radio button in a same-named group having the "required"
+                     attribute suffices in making a selection a requirement -->
+        <input type="radio" required name="driver" id="r1" value="yes"><label for="r1">Yes</label>
+        <input type="radio" required name="driver" id="r2" value="no"><label for="r2">No</label>
+      </fieldset>
+      </p>
+      <p>
+        <label for="n1">How old are you?</label>
+        <!-- The pattern attribute can act as a fallback for browsers which
+                   don't implement the number input type but support the pattern attribute.
+                   Please note that browsers that support the pattern attribute will make it
+                   fail silently when used with a number field.
+                   Its usage here acts only as a fallback -->
+        <input type="number" min="12" max="120" step="1" id="n1" name="age" pattern="\d+">
+      </p>
+      <p>
+        <label for="t1">What's your favorite fruit?<abbr title="This field is mandatory"
+            aria-label="required">*</abbr></label>
+        <input type="text" id="t1" name="fruit" list="l1" required
+          pattern="[Bb]anana|[Cc]herry|[Aa]pple|[Ss]trawberry|[Ll]emon|[Oo]range">
+        <datalist id="l1">
+          <option>Banana</option>
+          <option>Cherry</option>
+          <option>Apple</option>
+          <option>Strawberry</option>
+          <option>Lemon</option>
+          <option>Orange</option>
+        </datalist>
+      </p>
+      <p>
+        <label for="t2">What's your e-mail address?</label>
+        <input type="email" id="t2" name="email">
+      </p>
+      <p>
+        <label for="t3">Leave a short message</label>
+        <textarea id="t3" name="msg" maxlength="140" rows="5"></textarea>
+      </p>
+      <p>
+        <button>Submit</button>
+      </p>
+    </form>
 
 
-    </main>
-    <script src="script.js"></script>
+
+    <ul>
+      <li>Your apps should always perform security checks on any form-submitted data on the server-side as well as the
+        client-side.</li>
+      <li>The Constraint validation API allows you to customize the validation message, and many properties and methods
+        you can implement.</li>
+      <li>The novalidate attribute on the form is what stops the form from showing its own error message bubbles.</li>
+      <li>The constraint validation API gives you a powerful tool to handle form validation, letting you have enormous
+        control over the user interface above and beyond what you can do with HTML and CSS alone.</li>
+      <li>The fetch() method can optionally accept a second parameter, an init object that allows you to control a
+        number of different settings</li>
+      <li>"no-cors" only allows a limited set of headers in the request: Accept, Accept-Language, Content-Language, and
+        Content-Type with a value of application/x-www-form-urlencoded, multipart/form-data, or text/plain.</li>
+      <li>All of the Headers methods throw a TypeError if a header name is used that is not a valid HTTP Header name.
+        The mutation operations will throw a TypeError if there is an immutable guard (see below). Otherwise, they fail
+        silently.</li>
+      <li>Response instances are returned when fetch() promises are resolved.</li>
+      <li>Feature detection: checks for the existence of Headers, Request, Response or fetch() on the Window or Worker
+        scope. </li>
+      <li>blob = a file-like object of immutable, raw data; they can be read as text or binary data, or converted into a
+        ReadableStream so its methods can be used for processing the data.</li>
+    </ul>
+
+
+
+
+
+  </main>
+  <script src="script.js"></script>
 </body>
 
 </html>
