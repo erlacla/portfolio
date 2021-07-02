@@ -1,0 +1,43 @@
+.hidden {
+    display: none;
+}
+input {
+    margin: 10px;
+    font-size: 15px;
+    width: 400px;
+  }
+input:invalid {
+    border: 1px dashed rgb(255, 0, 0);
+  }
+button {
+    font-size: 15px;
+    padding: 5px;
+    background-color: rgb(6, 161, 71);
+  }
+  .errors {
+    border: 1px solid rgba(139, 0, 0, 0.966);
+    background-color: rgb(241, 142, 28);
+    padding: 10px;
+    max-width: 400px;
+    margin: auto;
+    margin-bottom: 20px;
+  }
+  #login, .errors, h1, #content {
+    text-align: center;
+  }
+  form {
+    border: 1px solid rgba(10, 10, 10, 0);
+    margin: auto;
+    padding: 20px;
+    width: 500px;
+    box-shadow: 10px 10px 8px 10px #888888;
+  }
+  #list {
+    text-align: left;
+    margin: 30px;
+    margin-top: 40px;
+    border: 15px solid rgb(218, 209, 209);
+    border-style: outset;
+    padding: 20px;
+    padding-left: 50px;
+  }
