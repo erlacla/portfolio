@@ -8,9 +8,7 @@
       name="description"
       content="Astronomy and English learning combine in a fun game of MadLib!"
     />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,32 +31,22 @@
       </section>
     </header>
     <nav>
-      <button onclick="toggleMenu()">&#9776; Menu</button>
+      <button id="togglebtn">&#9776;</button>
       <ul id="nav" class="hide">
         <li><a href="#" id="active">Home</a></li>
         <li>
           <a href="https://erlacla.github.io/wdd230/lesson11/preston"
-            >Featured Solar Objects</a
+            >Another MadLib</a
           >
         </li>
         <li>
           <a href="https://erlacla.github.io/wdd230/lesson11/sodasprings"
-            >About MadLib</a
-          >
-        </li>
-        <li>
-          <a href="https://erlacla.github.io/wdd230/lesson11/fishhaven"
-            >Fish Haven</a
-          >
-        </li>
-        <li>
-          <a href="https://erlacla.github.io/wdd230/lesson11/stormcenter"
-            >Storm Center</a
+            >Solar Objects</a
           >
         </li>
         <li>
           <a href="https://erlacla.github.io/wdd230/lesson11/gallery"
-            >Gallery</a
+            >Solar Gallery</a
           >
         </li>
       </ul>
@@ -66,164 +54,84 @@
 
     <main>
       
-        <section class="overHero">
-          <h2>Welcome!</h2>
+        <section>
           <p>
-            We are weather enthusiasts in three towns of south-east Idaho! Find
-            current weather condition data, stay in-the-loop with local news,
-            see current weather stories and pictures, gather at the special
-            bi-annual events, and participate in the bi-annual photo
-            competition. Here at Beautiful Idaho Sky we inspire future
-            scientists and photographers, and help build a tight-knit community.
+            Pick a solar system object and then fill in the blanks to get your MadLib!
           </p>
-        </section>
-      </div>
+        </section>      
       
-      
-
+<div class="container">
       <form name="form" action="thanks.html" method="get">
         <fieldset>
          
           <div class="form-box">
-            <label for="name">Full Name* </label>
+            <label for="solarObject">Choose a solar object:</label>
+            <input list="type" id="solarObject" name="solarObject" />
+            <datalist id="type">
+              <option value="Moon"></option>
+              <option value="Jupiter"></option>
+              <option value="Neptune"></option>
+              <option value="Pluto"></option>
+              <option value="Uranus"></option>
+              <option value="Mars"></option>
+              <option value="Mercury"></option>
+              <option value="Saturn"></option>
+              <option value="Sun"></option>
+              <option value="Earth"></option>
+              <option value="Venus"></option>
+              <option value="Hally's Comet"></option>
+            </datalist>
+          </div>
+
+          <div class="form-box">
+            <label for="noun">Noun:</label>
             <input
               type="text"
-              name="name"
-              id="name"
-              required="required"
-              pattern="[A-Za-z]{5+}"
-              autocomplete="name"
+              name="noun"
+              id="noun"
             />
           </div>
 
           <div class="form-box">
-            <label for="email">Email</label>
+            <label for="adjective">Adjective:</label>
             <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="email@example.com"
+              type="text"
+              id="adjective"
+              name="adjective"
             />
           </div>
 
           <div class="form-box">
-            <label for="phone">Phone*</label>
+            <label for="exclamation">Exclamation:</label>
             <input
-              type="tel"
-              id="phone"
-              name="phone"
-              pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-              required="required"
-              placeholder="Example 123-456-7890"
+              type="text"
+              id="exclamation"
+              name="exclamation"
             />
           </div>
 
           <div class="form-box">
-            <label for="number">Zipcode*</label>
-            <input type="number" id="number" name="zip" required="required" />
-          </div>
-        </fieldset>
-        <br /><br />
-        <fieldset>
-          <legend>Storm Information</legend>
-          <div class="form-box">
-            <label for="start">Storm Date:</label>
-            <input
-              type="date"
-              id="start"
-              name="date-of-storm"
-              value="2021-02-26"
-              min="2020-01-01"
-              max="2021-12-31"
-            />
+            <label for="b-name">Boy's name:</label>
+            <input 
+            type="text" 
+            id="b-name" 
+            name="b-name"
+             />
           </div>
 
           <div class="form-box">
-            <label for="stormType">Storm Type:</label>
-            <input list="type" id="stormType" name="stormType" />
-            <datalist id="type">
-              <option value="Flash Flood"></option>
-              <option value="Hail"></option>
-              <option value="Hurricane"></option>
-              <option value="Thunderstorm"></option>
-              <option value="Tornado"></option>
-            </datalist>
+            <label for="g-name">Girl's name:</label>
+            <input 
+            type="text" 
+            id="g-name" 
+            name="g-name"
+             />
           </div>
-
-          <div class="rating">
-            <label for="rating"
-              >Storm Severity:&nbsp;&nbsp;&nbsp;
-              <br />
-              <input
-                type="range"
-                id="rating"
-                value="5"
-                min="1"
-                max="10"
-                step="1"
-                list="tickmarks"
-                oninput="adjustRating(this.value)"
-                onchange="adjustRating(this.value)"
-              />
-              <span id="ratingvalue">5</span>
-            </label>
-
-            <datalist id="tickmarks">
-              <option value="0"></option>
-              <option value="1"></option>
-              <option value="2"></option>
-              <option value="3"></option>
-              <option value="4"></option>
-              <option value="5"></option>
-              <option value="6"></option>
-              <option value="7"></option>
-              <option value="8"></option>
-              <option value="9"></option>
-              <option value="10"></option>
-            </datalist>
-          </div>
-          <br />
-          <div class="form-box">
-            <label for="selectregion">
-              <select name="region" id="selectregion" onchange="selectRegion()">
-                <option value="" disabled selected>Select Region ...</option>
-                <option value="Preston">Preston</option>
-                <option value="Soda Springs">Soda Springs</option>
-                <option value="Fish Haven">Fish Haven</option>
-              </select></label
-            >
-          </div>
-
-          <div>Are you in danger? <em>(Choose one)</em></div>
-          <div>
-            <input type="radio" id="yes" name="danger" value="yes" checked />
-            <label for="yes">Yes</label>
-          </div>
-          <div>
-            <input type="radio" id="maybe" name="danger" value="maybe" />
-            <label for="maybe">Maybe</label>
-          </div>
-          <div>
-            <input type="radio" id="no" name="danger" value="no" />
-            <label for="no">No</label>
-          </div>
-          <br />
-          <div class="form-box">
-            <label for="info">Additional information:</label>
-
-            <textarea
-              id="info"
-              name="info"
-              rows="5"
-              cols="33"
-              placeholder="Type here..."
-            ></textarea>
-          </div>
-        </fieldset>
+       
         <br />
-        <input id="submitBtn" type="submit" value="Report the Storm" />
+        <input id="submitBtn" type="submit" value="Create MadLib" />
       </form>
-    
+    </div>
 
 
 

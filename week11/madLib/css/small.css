@@ -3,6 +3,7 @@ h1 {
 }
 p, div, form {
     font-family: 'PT Sans', sans-serif;
+    margin: 20px;
 }
 header {
     background-color: #FAFAFF;
@@ -23,6 +24,10 @@ header {
   #headLogo {
       max-width: 60%;
   }
+  p {
+    font-size: 20px;
+    text-align: center;
+  }
   form {
     background-color: #fffcf7;
     width: 80%;
@@ -41,14 +46,20 @@ header {
     padding-left: 10px;
     margin-top: 5px;
   }
-  .form-box {
-    padding: 10px;
-    display: inline-block;
-    flex-direction: column;
-    margin-bottom: 20px;
-    color: #140a14;
+  .container {
+    width: 90%;
+    clear: both;
+    margin: auto;
   }
   
+  .container input {
+    width: 100%;
+    clear: both;
+  }
+  .form-box {
+    padding: 10px;
+    margin-bottom: 20px;
+  }
   input[type="radio"] {
     height: auto;
   }
@@ -72,13 +83,13 @@ header {
     display: block;
     margin-right: auto;
     margin-left: auto;
-    background-color: #fffcf7;
+    background-color: #fff;
     font-family: "Fenix", serif;
-    color: #140a1f;
+    color: #000000;
   }
   #submitBtn:hover,
-  #submitBtn:focus {
-    background-color: #140a1f;
+  #submitBtn:focus, nav button:hover, nav a:hover {
+    background-color: #d8341e;
     color: #fffcf7;
   }
   textarea {
@@ -86,3 +97,26 @@ header {
     margin-top: 5px;
     width: 95%;
   }
+  nav button {
+    font-size: 30px;
+    display: block;
+    margin: auto;
+    
+  }
+  nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  nav ul li a {
+    display: block;
+    text-align: center;
+    padding: 0.8rem 2%;
+    text-decoration: none;
+    color: #000000;
+    font-size: 20px;
+  }
+  nav ul.hide {
+    display: none;
+  }
+  
