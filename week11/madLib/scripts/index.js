@@ -7,7 +7,7 @@ fetchJSON(url);
 const json = await fetchJSON(url);
 //const bodies = JSON.stringify(json);
 //console.log(bodies);
-table();
+table(json);
 document.querySelector('#togglebtn').addEventListener("click", toggleMenu);
 function toggleMenu() {
     document.querySelector("#nav").classList.toggle("hide");
@@ -18,25 +18,21 @@ function toggleMenu() {
 //   ${}`;
 
 
-
-
-
-
-
 // --- For Solar Objects Table
 
 function table(json) {
-  alert("function called")
   let i;
   console.log(json);
   let table = document.createElement("table");
+  let row = document.createElement("tr");
+  console.log(json.bodies[1].englishName);
+  // table.innerHTML = `<tr><th>Name</th><th>Radius</th></tr>`;
 
-  table.innerHTML = `<tr><th>Name</th><th>Radius</th></tr>`;
-  for (i = 0; i < 287; i++) { 
-    let row = `<tr><td>${json.bodies[i].englishname}</td><td>${json.bodies[i].equaRadius / 1.609} miles</td></tr>`;
+  for (i = 0; i < json.length; i++) { 
+    row.innerHTML = `<tr><td>${json.bodies[i].englishName}</td><td>${json.bodies[i].equaRadius / 1.609} miles</td></tr>`;
     table.appendChild(row);
-       console.log(bodies[i].englishname);
+
   }
   
-  document.getElementById("sso").innerHTML = table;
+  document.getElementById("sso").textContent = table;
 }

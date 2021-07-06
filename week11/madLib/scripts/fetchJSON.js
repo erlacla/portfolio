@@ -7,9 +7,7 @@ export function fetchJSON(url) {
                 return response.json(); 
             }
         })
-        .then(jsonObject => {
-            console.log(jsonObject);
-        })
+       
         .catch(function(error) {
             console.log(error);
         }); 
