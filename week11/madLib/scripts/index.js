@@ -23,16 +23,22 @@ function toggleMenu() {
 function table(json) {
   let i;
   console.log(json);
-  let table = document.createElement("table");
-  let row = document.createElement("tr");
-  console.log(json.bodies[1].englishName);
-  // table.innerHTML = `<tr><th>Name</th><th>Radius</th></tr>`;
-
-  for (i = 0; i < json.length; i++) { 
-    row.innerHTML = `<tr><td>${json.bodies[i].englishName}</td><td>${json.bodies[i].equaRadius / 1.609} miles</td></tr>`;
+  
+  let table = document.getElementById("sso");
+  let head = document.createElement("th");
+  let headTwo = document.createElement("th");
+  
+  head.innerHTML = `<tr><th>Object Name</th></tr>`;
+  headTwo.innerHTML = `<tr><th>Mass</th></tr>`;
+  table.appendChild(head);
+  table.appendChild(headTwo);
+  for (i = 0; i < json.bodies.length; i++) { 
+    let row = document.createElement("tr");
+    row.innerHTML = `<td>${json.bodies[i].englishName}</td><td>${json.bodies[i].mass.massValue} X 10<sup>${json.bodies[i].mass.massExponent}</sup> kilograms</td>`;
+    
     table.appendChild(row);
-
+  
   }
   
-  document.getElementById("sso").textContent = table;
+ 
 }
