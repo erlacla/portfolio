@@ -1,18 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
+
+<head>
     <meta charset="utf-8" />
-        <title>Local Quakes</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="stylesheet" href="styles.css">
-    </head>
+    <title>Local Quakes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles.css">
+</head>
 
-    <body>
-        <main>
-            <h1>Earthquakes Nearby</h1>
-            <ul id="quakeList" ></ul>
+<body>
+    <main>
+        <h1>Earthquakes Nearby</h1>
 
-        </main>
-        <script type="module" src="index.js"></script>
-    </body>
+        <form id="radiusEntryForm" method="get">
+            <label for='radius'>Enter the number of miles away you'd like to see quakes:</label>
+            <input id='radius' type='radius' name='radius' required="required" min=1 placeholder='300'>
+            <button type='submit'>Submit</button>
+        </form>
+
+        <ul id="quakeList"></ul>
+        <button id="back">Back</button> 
+        
+    </main>
+    <script type="module" src="index.js"></script>
+</body>
+
 </html>

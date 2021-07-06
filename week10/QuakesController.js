@@ -3,6 +3,8 @@ import Quake from "./Quake.js";
 import QuakesView from "./QuakesView.js";
 
 // Quake controller
+let radius = document.querySelector('#radius').value;
+console.log(radius);
 export default class QuakesController {
   constructor(parent, position = null) {
     this.parent = parent;
@@ -17,11 +19,11 @@ export default class QuakesController {
     this.quakes = new Quake();
     this.quakesView = new QuakesView();
   }
-  async init() {
+  async init(radius) {
     // use this as a place to grab the element identified by this.parent, do the initial call of this.initPos(), and display some quakes by calling this.getQuakesByRadius()
     this.parentElement = document.querySelector("#quakeList");
     await this.initPos();
-    this.getQuakesByRadius(300);
+    this.getQuakesByRadius(radius);
   }
   async initPos() {
     // if a position has not been set
@@ -40,7 +42,7 @@ export default class QuakesController {
     }
   }
 
-  async getQuakesByRadius(radius = 300) {
+  async getQuakesByRadius(radius) {
     // this method provides the glue between the model and view. Notice it first goes out and requests the appropriate data from the model, then it passes it to the view to be rendered.
     //set loading message
     this.parentElement.innerHTML = "Loading...";

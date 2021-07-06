@@ -27,6 +27,17 @@ ul {
 body {
     background-color: #fff ;
 }
+#back {
+    margin: 0 auto;
+    display: block;
+}
+form {
+    margin: 0 auto;
+    display: block;
+    width: 80%;
+    padding: 20px;
+    font-size: 20px;
+}
 
 @media only screen and (min-width: 60em) {
     ul {
