@@ -44,8 +44,10 @@ header {
 
     margin-bottom: 45px;
   }
-  table, th, td {
+  th, td {
     border: 1px solid black;
+      padding: 8px;
+      text-align: left;
   }
   input {
     height: 40px;
