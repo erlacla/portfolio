@@ -7,6 +7,7 @@ fetchJSON(url);
 const json = await fetchJSON(url);
 table(json);
 document.querySelector("#togglebtn").addEventListener("click", toggleMenu);
+document.querySelector("#togglebtn").addEventListener("touchend", toggleMenu);
 function toggleMenu() {
   document.querySelector("#nav").classList.toggle("hide");
 }
@@ -47,3 +48,8 @@ function table(json) {
     }
   }
 }
+
+const today = new Date();
+let currentDay = new Intl.DateTimeFormat("en-US", { dateStyle: "full" }).format(today);
+let date = document.querySelector("#currentdate");
+date.textContent = currentDay;
