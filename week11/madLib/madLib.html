@@ -1,155 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Solar MadLib</title>
-    <meta
-      name="description"
-      content="Astronomy and English learning combine in a fun game of MadLib!"
-    />
-    <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="css/normalize.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=PT+Sans&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/small.css" />
-    <link rel="stylesheet" href="css/medium.css" />
-    <link rel="stylesheet" href="css/large.css" />
-  </head>
-  <body>
-    <header>
-      <img id="headLogo" src="images/logo500.png"  sizes="100vw"
-      srcset="
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Solar MadLib</title>
+  <meta name="description" content="Astronomy and English learning combine in a fun game of MadLib!" />
+  <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="css/normalize.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=PT+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/small.css" />
+  <link rel="stylesheet" href="css/medium.css" />
+  <link rel="stylesheet" href="css/large.css" />
+</head>
+
+<body>
+  <header>
+    <img id="headLogo" src="images/logo500.png" sizes="100vw" srcset="
         images/hero200.png 200w,
         images/logo500.png 500w
-      "
-      alt="Solar MadLib Logo" />
-      <section class="headings">
-        <h1>Solar MadLib</h1>
-        <div>Explore the Solar System,<br>MadLib style!</div>
-      </section>
-    </header>
-    <nav>
-      <button id="togglebtn">&#9776;</button>
-      <ul id="nav" class="hide">
-        <li><a href="#" id="active">Home</a></li>
-        <li>
-          <a href="https://erlacla.github.io/wdd230/lesson11/preston"
-            >Another MadLib</a
-          >
-        </li>
-        <li>
-          <a href="solarObjects.html"
-            >Solar Objects</a
-          >
-        </li>
-        <li>
-          <a href="https://erlacla.github.io/wdd230/lesson11/gallery"
-            >Solar Gallery</a
-          >
-        </li>
-      </ul>
-    </nav>
+      " alt="Solar MadLib Logo" />
+    <section class="headings">
+      <h1>Solar MadLib</h1>
+      <div>Explore the Solar System,<br>MadLib style!</div>
+    </section>
+  </header>
+  <nav>
+    <button id="togglebtn">&#9776;</button>
+    <ul id="nav" class="hide">
+      <li><a href="#" id="active">Home</a></li>
+      <li>
+        <a href="#">Another MadLib</a>
+      </li>
+      <li>
+        <a href="solarObjects.html">Solar Objects</a>
+      </li>
+      <li>
+        <a href="gallery.html">Solar Gallery</a>
+      </li>
+    </ul>
+  </nav>
 
-    <main>
-      
-        <section id="top">
-          <p>
-            Pick a solar system object and then fill in the blanks to get your MadLib!
-          </p>
-        </section>      
-      
-<div class="container">
-      <form name="form" action="display.html" method="POST">
+  <main>
+
+    <section id="top">
+      <p>
+        Pick a solar system object and then fill in the blanks to get your MadLib!
+      </p>
+    </section>
+
+    <div class="container">
+      <form id="madLib_input" action="display.html">
         <fieldset>
-         
+
           <div class="form-box">
             <label for="solarObject">Choose a solar object:</label>
             <input list="type" id="solarObject" name="solarObject" />
             <datalist id="type">
-              <option value="Moon"></option>
+              <option value="Earth"></option>
+              <option value="Halley's Comet"></option>
               <option value="Jupiter"></option>
+              <option value="Mars"></option>
+              <option value="Mercury"></option>
+              <option value="Moon"></option>
               <option value="Neptune"></option>
               <option value="Pluto"></option>
               <option value="Uranus"></option>
-              <option value="Mars"></option>
-              <option value="Mercury"></option>
               <option value="Saturn"></option>
               <option value="Sun"></option>
-              <option value="Earth"></option>
               <option value="Venus"></option>
-              <option value="Halley's Comet"></option>
+              
             </datalist>
           </div>
 
           <div class="form-box">
             <label for="noun">Noun:</label>
             <br>
-            <input
-              type="text"
-              name="noun"
-              id="noun"
-            />
-            <span class="info">&#x3F<p class="hide">A noun is a word that names something, such as a person, place, thing, or idea: book, Elvis, shoe, Disneyland, freedom.</p></span>
+            <input type="text" name="noun" id="noun" />
+            <span class="info">&#x3F<p class="hide">A noun is a word that names something, such as a person, place,
+                thing, or idea: book, Elvis, shoe, Disneyland, freedom.</p></span>
+          </div>
+
+          <div class="form-box">
+            <label for="verb">Verb:</label>
+            <br>
+            <input type="text" name="verb" id="verb" />
+            <span class="info">&#x3F<p class="hide">Verbs are words that represent actions that are external
+               (run, jump, work) and internal (love, think, consider).</p></span>
           </div>
 
           <div class="form-box">
             <label for="adjective">Adjective:</label>
             <br>
-            <input
-              type="text"
-              id="adjective"
-              name="adjective"
-            />
-            <span class="info">&#x3F<p class="hide">Adjectives are words that describe the qualities or states of being of nouns: enormous, doglike, silly, yellow, fun, fast. They can also describe the quantity of nouns: many, few, millions, eleven.</p></span>
+            <input type="text" id="adjective" name="adjective" />
+            <span class="info">&#x3F<p class="hide">Adjectives are words that describe the qualities or states of being
+                of nouns: enormous, doglike, silly, yellow, fun, fast. They can also describe the quantity of nouns:
+                many, few, millions, eleven.</p></span>
           </div>
 
           <div class="form-box">
             <label for="exclamation">Exclamation:</label>
-            <input
-              type="text"
-              id="exclamation"
-              name="exclamation"
-            />
+            <input type="text" id="exclamation" name="exclamation" />
+            <span class="info">&#x3F<p class="hide">Exclamations usually express sudden feelings, you’ll often see them
+                used to convey surprise (both good surprises and bad ones) or excitement.</p></span>
+          </div>
+
+          <div class="form-box">
+            <label for="adverb">Adverb:</label>
+            <br>
+            <input type="text" name="adverb" id="adverb" />
+            <span class="info">&#x3F<p class="hide">An adverb is a word that modifies (describes) a verb 
+              (he sings loudly), an adjective (very tall), another adverb (ended too quickly), or even a 
+              whole sentence (Fortunately, I had brought an umbrella). Adverbs often end in -ly.</p></span>
           </div>
 
           <div class="form-box">
             <label for="b-name">Boy's name:</label>
-            <input 
-            type="text" 
-            id="b-name" 
-            name="b-name"
-             />
+            <input type="text" id="b-name" name="b-name" />
+          </div>
+
+          <div class="form-box">
+            <label for="animal">Animal:</label>
+            <input type="text" id="animal" name="animal" />
           </div>
 
           <div class="form-box">
             <label for="g-name">Girl's name:</label>
-            <input 
-            type="text" 
-            id="g-name" 
-            name="g-name"
-             />
+            <input type="text" id="g-name" name="g-name" />
           </div>
-       
-        <br />
-        <input id="submitBtn" type="submit" value="Create MadLib" />
+
+          <br />
+          <input id="submitBtn" type="submit" value="Create MadLib" onclick="madLib()"/>
       </form>
     </div>
 
 
-
-
-
-
-    </main>
-    <footer>
-      
-        <span id="currentdate"></span>
-      </section>
-    </footer>
-  
-    <script type="module" src="scripts/index.js"></script>
+  </main>
+  <footer>
+    <p>Information about words taken from <a href="https://www.grammarly.com/blog/" target="_blank">https://www.grammarly.com/blog/</a></p>
     
-  </body>
+    <span id="currentdate"></span>
+    </section>
+  </footer>
+
+  <script type="module" src="scripts/index.js"></script>
+
+</body>
+
 </html>
