@@ -12,10 +12,11 @@ fetchJSON(url);
 
 const json = await fetchJSON(url);
 
+
 function toggleForm() {
   document.querySelector(".container").classList.toggle("hide");
-  
 }
+
 function reload() {
   location.reload();
     return false;
@@ -26,8 +27,8 @@ form.addEventListener("submit", (e) => {
   e.preventDefault();
   console.log(json);
   toggleForm();
-
-  // document.querySelector("#display").classList.toggle("hide");
+  document.querySelector("#display").classList.toggle("hide");
+  
 
   let girlsName = form.querySelector("#g-name").value;
   let boysName = form.querySelector("#b-name").value;
