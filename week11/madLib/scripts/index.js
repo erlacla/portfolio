@@ -12,22 +12,34 @@ fetchJSON(url);
 
 const json = await fetchJSON(url);
 
-const form = document.getElementById("madLib_input");
+function toggleForm() {
+  document.querySelector(".container").classList.toggle("hide");
+  
+}
+function reload() {
+  location.reload();
+    return false;
+}
+
+const form = document.getElementById("madLib");
 form.addEventListener("submit", (e) => {
+  e.preventDefault();
   console.log(json);
-  
-  let girlsName = document.querySelector("#g-name").value;
-  let boysName = document.querySelector("#b-name").value;
-  let exclamation = document.querySelector("#exclamation").value;
-  let adjective = document.querySelector("#adjective").value;
-  let noun = document.querySelector("#noun").value;
-  let solarObject = document.querySelector("#solarObject").value;
-  let verb = document.querySelector("#verb").value;
-  let adverb = document.querySelector("#adverb").value;
-  let animal = document.querySelector("#animal").value;
+  toggleForm();
 
+  // document.querySelector("#display").classList.toggle("hide");
 
-  
+  let girlsName = form.querySelector("#g-name").value;
+  let boysName = form.querySelector("#b-name").value;
+  let exclamation = form.querySelector("#exclamation").value;
+  let adjective = form.querySelector("#adjective").value;
+  let noun = form.querySelector("#noun").value;
+  let solarObject = form.querySelector("#solarObject").value;
+  let verb = form.querySelector("#verb").value;
+  let adverb = form.querySelector("#adverb").value;
+  let animal = form.querySelector("#animal").value;
+
+  let obj = 0;
   switch (solarObject) {
     case "Earth":
       obj = 243;
@@ -49,7 +61,7 @@ form.addEventListener("submit", (e) => {
       break;
     case "Neptune":
       obj = 219;
-      break
+      break;
     case "Pluto":
       obj = 7;
       break;
@@ -67,23 +79,30 @@ form.addEventListener("submit", (e) => {
       break;
   }
 
-
-
-
   let section = document.getElementById("display");
   let story = document.createElement("p");
-  
+
   story.innerHTML = `Once upon a time there was a girl named ${girlsName}.
   She was so fascinated by ${solarObject}. Why, you ask? Because in her mind, there was a ${adjective}
   ${animal} living ${adverb} close to ${solarObject}. If she could, she would grab her friend ${boysName} 
   and ${verb} the ${json.bodies[obj].sideralOrbit} day trip to go find the ${noun} that she thinks the
   ${animal} needs to survive. The trip takes the same amount of days as it does for ${solarObject}
-    to orbit the sun! ${exclamation}! I wonder if ${boysName} would care that much for the ${animal}...`;
+  to orbit the sun! ${exclamation}! I wonder if ${boysName} would care that much for the ${animal}...`;
 
   section.appendChild(story);
+
+  let backButton = document.createElement("button");
+  backButton.setAttribute("id", "back");
+  backButton.innerHTML = "Try again";
+  
+section.appendChild(backButton);
+document.querySelector("#back").addEventListener("click", reload);
+  document.querySelector("#back").addEventListener("touchend", reload);
 });
 
 const today = new Date();
-let currentDay = new Intl.DateTimeFormat("en-US", { dateStyle: "full" }).format(today);
+let currentDay = new Intl.DateTimeFormat("en-US", { dateStyle: "full" }).format(
+  today
+);
 let date = document.querySelector("#currentdate");
 date.textContent = currentDay;

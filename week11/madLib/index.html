@@ -44,15 +44,18 @@
   </nav>
 
   <main>
+    <p id="display"></p>
 
-    <section id="top">
-      <p>
-        Pick a solar system object and then fill in the blanks to get your MadLib!
-      </p>
-    </section>
 
     <div class="container">
-      <form id="madLib_input" action="display.html">
+      <section id="top">
+        <p>
+          Pick a solar system object and then fill in the blanks to get your MadLib!
+        </p>
+      </section>
+
+      <form id="madLib">
+
         <fieldset>
 
           <div class="form-box">
@@ -71,7 +74,7 @@
               <option value="Saturn"></option>
               <option value="Sun"></option>
               <option value="Venus"></option>
-              
+
             </datalist>
           </div>
 
@@ -88,7 +91,7 @@
             <br>
             <input type="text" name="verb" id="verb" />
             <span class="info">&#x3F<p class="hide">Verbs are words that represent actions that are external
-               (run, jump, work) and internal (love, think, consider).</p></span>
+                (run, jump, work) and internal (love, think, consider).</p></span>
           </div>
 
           <div class="form-box">
@@ -111,9 +114,9 @@
             <label for="adverb">Adverb:</label>
             <br>
             <input type="text" name="adverb" id="adverb" />
-            <span class="info">&#x3F<p class="hide">An adverb is a word that modifies (describes) a verb 
-              (he sings loudly), an adjective (very tall), another adverb (ended too quickly), or even a 
-              whole sentence (Fortunately, I had brought an umbrella). Adverbs often end in -ly.</p></span>
+            <span class="info">&#x3F<p class="hide">An adverb is a word that modifies (describes) a verb
+                (he sings loudly), an adjective (very tall), another adverb (ended too quickly), or even a
+                whole sentence (Fortunately, I had brought an umbrella). Adverbs often end in -ly.</p></span>
           </div>
 
           <div class="form-box">
@@ -132,15 +135,16 @@
           </div>
 
           <br />
-          <input id="submitBtn" type="submit" value="Create MadLib" onclick="madLib()"/>
+          <input id="submitBtn" type="submit" value="Create MadLib" />
       </form>
     </div>
 
 
   </main>
   <footer>
-    <p>Information about words taken from <a href="https://www.grammarly.com/blog/" target="_blank">https://www.grammarly.com/blog/</a></p>
-    
+    <p class="container">Information about words taken from <a href="https://www.grammarly.com/blog/"
+         target="_blank">https://www.grammarly.com/blog/</a></p>
+
     <span id="currentdate"></span>
     </section>
   </footer>
