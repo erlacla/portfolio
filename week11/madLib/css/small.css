@@ -159,15 +159,15 @@ img {
   color: red;
 }
 
-span.info{
+p.info{
   margin:0px;
 }
 
-span.info:hover p{
+p.info:hover span {
   display:block;
   z-index: 99;
 }
-p.hide {
+span.hide {
   display: none;
 }
 #display {

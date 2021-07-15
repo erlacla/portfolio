@@ -48,11 +48,11 @@
 
 
     <div class="container">
-      <section id="top">
+      <div id="top">
         <p>
           Pick a solar system object and then fill in the blanks to get your MadLib!
         </p>
-      </section>
+      </div>
 
       <form id="madLib">
 
@@ -80,43 +80,43 @@
 
           <div class="form-box">
             <label for="noun">Noun:</label>
-            <br>
+            
             <input type="text" name="noun" id="noun" />
-            <span class="info">&#x3F<p class="hide">A noun is a word that names something, such as a person, place,
-                thing, or idea: book, Elvis, shoe, Disneyland, freedom.</p></span>
+            <p class="info">&#x3F;<span class="hide">A noun is a word that names something, such as a person, place,
+                thing, or idea: book, Elvis, shoe, Disneyland, freedom.</span></p>
           </div>
 
           <div class="form-box">
             <label for="verb">Verb:</label>
-            <br>
+            
             <input type="text" name="verb" id="verb" />
-            <span class="info">&#x3F<p class="hide">Verbs are words that represent actions that are external
-                (run, jump, work) and internal (love, think, consider).</p></span>
+            <p class="info">&#x3F;<span class="hide">Verbs are words that represent actions that are external
+                (run, jump, work) and internal (love, think, consider).</span></p>
           </div>
 
           <div class="form-box">
             <label for="adjective">Adjective:</label>
-            <br>
+            
             <input type="text" id="adjective" name="adjective" />
-            <span class="info">&#x3F<p class="hide">Adjectives are words that describe the qualities or states of being
+            <p class="info">&#x3F;<span class="hide">Adjectives are words that describe the qualities or states of being
                 of nouns: enormous, doglike, silly, yellow, fun, fast. They can also describe the quantity of nouns:
-                many, few, millions, eleven.</p></span>
+                many, few, millions, eleven.</span></p>
           </div>
 
           <div class="form-box">
             <label for="exclamation">Exclamation:</label>
             <input type="text" id="exclamation" name="exclamation" />
-            <span class="info">&#x3F<p class="hide">Exclamations usually express sudden feelings, you’ll often see them
-                used to convey surprise (both good surprises and bad ones) or excitement.</p></span>
+            <p class="info">&#x3F;<span class="hide">Exclamations usually express sudden feelings, you’ll often see them
+                used to convey surprise (both good surprises and bad ones) or excitement.</span></p>
           </div>
 
           <div class="form-box">
             <label for="adverb">Adverb:</label>
-            <br>
+            
             <input type="text" name="adverb" id="adverb" />
-            <span class="info">&#x3F<p class="hide">An adverb is a word that modifies (describes) a verb
+            <p class="info">&#x3F;<span class="hide">An adverb is a word that modifies (describes) a verb
                 (he sings loudly), an adjective (very tall), another adverb (ended too quickly), or even a
-                whole sentence (Fortunately, I had brought an umbrella). Adverbs often end in -ly.</p></span>
+                whole sentence (Fortunately, I had brought an umbrella). Adverbs often end in -ly.</span></p>
           </div>
 
           <div class="form-box">
@@ -136,6 +136,7 @@
 
           <br />
           <input id="submitBtn" type="submit" value="Create MadLib" />
+          </fieldset>
       </form>
     </div>
 
@@ -143,7 +144,7 @@
   </main>
   <footer>
     <p class="container">Information about words taken from <a href="https://www.grammarly.com/blog/"
-         target="_blank">https://www.grammarly.com/blog/</a></p>
+         target="_blank" rel="noopener">https://www.grammarly.com/blog/</a></p>
 
     <span id="currentdate"></span>
     </section>
