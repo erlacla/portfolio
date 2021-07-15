@@ -156,7 +156,7 @@ img {
 }
 .info {
   display: inline;
-  color: red;
+  color: rgb(129, 3, 3);
 }
 
 p.info{
