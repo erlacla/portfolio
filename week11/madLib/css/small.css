@@ -1,6 +1,5 @@
 body {
   margin-top: 20px;
-  background-color: #fafaffff;
 }
 h1,
 h2 {
@@ -18,7 +17,6 @@ form,
   color: #000;
 }
 header {
-  background-color: #fafaffff;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -32,6 +30,7 @@ header {
   position: absolute;
   text-align: center;
   text-shadow: 30px 2px 20px #fafaffff;
+  margin-bottom: 20px;
 }
 #headLogo {
   max-width: 60%;
@@ -41,7 +40,7 @@ header:hover #headLogo {
   transition-duration: 5s;
 }
 #togglebtn {
-  margin-top: 60px;
+  margin-top: 40px;
   font-size: 30px;
   display: block;
   margin-left: auto;
@@ -63,13 +62,10 @@ form,
 #apotd {
   background-color: #fafaffff;
   width: 80%;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 30px auto 60px auto;
   padding: 20px;
   box-shadow: 0 0 30px #30343fff;
   font-size: 20px;
-
-  margin-bottom: 45px;
 }
 th,
 td {
@@ -197,6 +193,7 @@ span.hide {
 
 body {
   padding: 2px 0 0 2px;
+  background-color: #fff;
 }
 
 .gallery img {
@@ -210,4 +207,17 @@ body {
 }
 input:invalid {
   box-shadow: 0 0 5px 1px red;
+}
+footer {
+  margin-top: 30px;
+  padding: 30px;
+  border-top: 2px solid #000;
+  display: block;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    max-width: 100%;
+}
+#currentdate {
+  padding-top: 10px;
 }

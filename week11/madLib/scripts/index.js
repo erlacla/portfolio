@@ -74,11 +74,13 @@ form.addEventListener("submit", (e) => {
 
   story.innerHTML = `Once upon a time there was a girl named ${girlsName}.
   She was so fascinated by ${solarObject}. She would imagine there was a ${adjective}
-  ${animal} living on ${solarObject}. She always named him ${boysName}. He had a birthday every ${json.bodies[obj].sideralOrbit} days 
-  because thats the amount of days it takes for ${solarObject}
-  to orbit the sun! She would plan out a    birthday party and  ${adverb} grab her friend  
-  and ${verb} the ${json.bodies[obj].sideralOrbit} day trip to go find the ${noun} that she thinks the
-  ${animal} needs to survive. The trip takes the same  ${exclamation}! I wonder if ${boysName} would care that much for the ${animal}...`;
+  ${animal} living on ${solarObject}. She always named him ${boysName}. He had a birthday every
+   ${json.bodies[obj].sideralOrbit} days 
+  because that's how long it takes for ${solarObject}
+  to orbit the sun! ${exclamation}! She would plan out a huge birthday party and ${adverb} ${verb} 
+  to the store to find the ${noun} that she thinks would be the perfect present for 
+  ${boysName}. After that she'd zoom in her imaginary rocket ship to the party and
+  play the day away on ${solarObject}! The end.`;
 
   section.appendChild(story);
 
@@ -99,28 +101,3 @@ let date = document.querySelector("#currentdate");
 date.textContent = currentDay;
 
 
-form.addEventListener('submit', function (event) {
-  if(!text.validity.valid) {
-    showError();
-    event.preventDefault();
-  }
-});
-
-function showError() {
-  if(text.validity.valueMissing) {
-    // If the field is empty,
-    // display the following error message.
-    emailError.textContent = 'You need to enter an e-mail address.';
-  } else if(email.validity.typeMismatch) {
-    // If the field doesn't contain an email address,
-    // display the following error message.
-    emailError.textContent = 'Entered value needs to be an e-mail address.';
-  } else if(email.validity.tooShort) {
-    // If the data is too short,
-    // display the following error message.
-    emailError.textContent = `Email should be at least ${ email.minLength } characters; you entered ${ email.value.length }.`;
-  }
-
-  // Set the styling appropriately
-  emailError.className = 'error active';
-}
