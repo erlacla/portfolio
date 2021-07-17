@@ -18,9 +18,9 @@
 
 <body>
   <header>
-    <img id="headLogo" src="images/logo500.png" sizes="100vw" srcset="
+    <img id="headLogo" src="images/logo500.jpg" sizes="100vw" srcset="
         images/hero200.png 200w,
-        images/logo500.png 500w
+        images/logo500.jpg 500w
       " alt="Solar MadLib Logo" />
     <section class="headings">
       <h1>Solar MadLib</h1>
@@ -60,19 +60,16 @@
 
           <div class="form-box">
             <label for="solarObject">Choose a solar object:</label>
-            <input list="type" id="solarObject" name="solarObject" />
+            <input list="type" id="solarObject" name="solarObject" required/>
             <datalist id="type">
               <option value="Earth"></option>
-              <option value="Halley's Comet"></option>
               <option value="Jupiter"></option>
               <option value="Mars"></option>
               <option value="Mercury"></option>
-              <option value="Moon"></option>
               <option value="Neptune"></option>
               <option value="Pluto"></option>
               <option value="Uranus"></option>
               <option value="Saturn"></option>
-              <option value="Sun"></option>
               <option value="Venus"></option>
 
             </datalist>
@@ -81,7 +78,7 @@
           <div class="form-box">
             <label for="noun">Noun:</label>
             
-            <input type="text" name="noun" id="noun" />
+            <input type="text" name="noun" id="noun" required/>
             <p class="info">&#x3F;<span class="hide">A noun is a word that names something, such as a person, place,
                 thing, or idea: book, Elvis, shoe, Disneyland, freedom.</span></p>
           </div>
@@ -89,7 +86,7 @@
           <div class="form-box">
             <label for="verb">Verb:</label>
             
-            <input type="text" name="verb" id="verb" />
+            <input type="text" name="verb" id="verb" required/>
             <p class="info">&#x3F;<span class="hide">Verbs are words that represent actions that are external
                 (run, jump, work) and internal (love, think, consider).</span></p>
           </div>
@@ -97,7 +94,7 @@
           <div class="form-box">
             <label for="adjective">Adjective:</label>
             
-            <input type="text" id="adjective" name="adjective" />
+            <input type="text" id="adjective" name="adjective" required/>
             <p class="info">&#x3F;<span class="hide">Adjectives are words that describe the qualities or states of being
                 of nouns: enormous, doglike, silly, yellow, fun, fast. They can also describe the quantity of nouns:
                 many, few, millions, eleven.</span></p>
@@ -105,15 +102,15 @@
 
           <div class="form-box">
             <label for="exclamation">Exclamation:</label>
-            <input type="text" id="exclamation" name="exclamation" />
+            <input type="text" id="exclamation" name="exclamation" required/>
             <p class="info">&#x3F;<span class="hide">Exclamations usually express sudden feelings, you’ll often see them
                 used to convey surprise (both good surprises and bad ones) or excitement.</span></p>
           </div>
 
           <div class="form-box">
-            <label for="adverb">Adverb:</label>
+            <label for="adverb">Adverb ending in -ly:</label>
             
-            <input type="text" name="adverb" id="adverb" />
+            <input type="text" name="adverb" id="adverb" required/>
             <p class="info">&#x3F;<span class="hide">An adverb is a word that modifies (describes) a verb
                 (he sings loudly), an adjective (very tall), another adverb (ended too quickly), or even a
                 whole sentence (Fortunately, I had brought an umbrella). Adverbs often end in -ly.</span></p>
@@ -121,17 +118,17 @@
 
           <div class="form-box">
             <label for="b-name">Boy's name:</label>
-            <input type="text" id="b-name" name="b-name" />
+            <input type="text" id="b-name" name="b-name" required/>
           </div>
 
           <div class="form-box">
             <label for="animal">Animal:</label>
-            <input type="text" id="animal" name="animal" />
+            <input type="text" id="animal" name="animal" required/>
           </div>
 
           <div class="form-box">
             <label for="g-name">Girl's name:</label>
-            <input type="text" id="g-name" name="g-name" />
+            <input type="text" id="g-name" name="g-name" required/>
           </div>
 
           <br />

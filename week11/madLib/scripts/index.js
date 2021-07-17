@@ -8,7 +8,6 @@ function toggleMenu() {
   document.querySelector("#nav").classList.toggle("hide");
 }
 
-fetchJSON(url);
 
 const json = await fetchJSON(url);
 
@@ -25,7 +24,6 @@ function reload() {
 const form = document.getElementById("madLib");
 form.addEventListener("submit", (e) => {
   e.preventDefault();
-  console.log(json);
   toggleForm();
   document.querySelector("#display").classList.toggle("hide");
   
@@ -45,9 +43,6 @@ form.addEventListener("submit", (e) => {
     case "Earth":
       obj = 243;
       break;
-    case "Halley's Comet":
-      obj = 237;
-      break;
     case "Jupiter":
       obj = 238;
       break;
@@ -56,9 +51,6 @@ form.addEventListener("submit", (e) => {
       break;
     case "Mercury":
       obj = 240;
-      break;
-    case "Moon":
-      obj = 1;
       break;
     case "Neptune":
       obj = 219;
@@ -72,9 +64,6 @@ form.addEventListener("submit", (e) => {
     case "Saturn":
       obj = 241;
       break;
-    case "Sun":
-      obj = 242;
-      break;
     case "Venus":
       obj = 244;
       break;
@@ -84,11 +73,12 @@ form.addEventListener("submit", (e) => {
   let story = document.createElement("p");
 
   story.innerHTML = `Once upon a time there was a girl named ${girlsName}.
-  She was so fascinated by ${solarObject}. Why, you ask? Because in her mind, there was a ${adjective}
-  ${animal} living ${adverb} close to ${solarObject}. If she could, she would grab her friend ${boysName} 
+  She was so fascinated by ${solarObject}. She would imagine there was a ${adjective}
+  ${animal} living on ${solarObject}. She always named him ${boysName}. He had a birthday every ${json.bodies[obj].sideralOrbit} days 
+  because thats the amount of days it takes for ${solarObject}
+  to orbit the sun! She would plan out a    birthday party and  ${adverb} grab her friend  
   and ${verb} the ${json.bodies[obj].sideralOrbit} day trip to go find the ${noun} that she thinks the
-  ${animal} needs to survive. The trip takes the same amount of days as it does for ${solarObject}
-  to orbit the sun! ${exclamation}! I wonder if ${boysName} would care that much for the ${animal}...`;
+  ${animal} needs to survive. The trip takes the same  ${exclamation}! I wonder if ${boysName} would care that much for the ${animal}...`;
 
   section.appendChild(story);
 
@@ -107,3 +97,30 @@ let currentDay = new Intl.DateTimeFormat("en-US", { dateStyle: "full" }).format(
 );
 let date = document.querySelector("#currentdate");
 date.textContent = currentDay;
+
+
+form.addEventListener('submit', function (event) {
+  if(!text.validity.valid) {
+    showError();
+    event.preventDefault();
+  }
+});
+
+function showError() {
+  if(text.validity.valueMissing) {
+    // If the field is empty,
+    // display the following error message.
+    emailError.textContent = 'You need to enter an e-mail address.';
+  } else if(email.validity.typeMismatch) {
+    // If the field doesn't contain an email address,
+    // display the following error message.
+    emailError.textContent = 'Entered value needs to be an e-mail address.';
+  } else if(email.validity.tooShort) {
+    // If the data is too short,
+    // display the following error message.
+    emailError.textContent = `Email should be at least ${ email.minLength } characters; you entered ${ email.value.length }.`;
+  }
+
+  // Set the styling appropriately
+  emailError.className = 'error active';
+}

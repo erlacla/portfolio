@@ -1,152 +1,164 @@
 body {
   margin-top: 20px;
+  background-color: #fafaffff;
 }
-h1, h2 {
-    font-family: 'Dela Gothic One', cursive;
-    text-align: center;
+h1,
+h2 {
+  font-family: "Dela Gothic One", cursive;
+  text-align: center;
+  color: #1e2749ff;
 }
 
-p, div, form, .tablepress {
-    font-family: 'PT Sans', sans-serif;
-    margin: 20px;
+p,
+div,
+form,
+.tablepress {
+  font-family: "PT Sans", sans-serif;
+  margin: 20px;
+  color: #000;
 }
 header {
-    background-color: #FAFAFF;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
-    max-width: 990px;
-    letter-spacing: 0.3rem;
-    font-size: 30px;
-    margin: 0 auto;
-  }
-  .headings {
-      position: absolute;
-      text-align: center;
-      text-shadow: 30px 2px 20px #fff;
-  }
-  #headLogo {
-      max-width: 60%;
-  }
-   #togglebtn {
-    margin-top: 60px;
-    font-size: 30px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  #top {
-    margin-top: 30px;
-  }
-  #top p {
-    font-size: 20px;
-    text-align: center;
-    max-width: 70%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  form, #display {
-    background-color: #fffcf7;
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 20px;
-    box-shadow: 0 0 30px rgb(41, 41, 41);
-    font-size: 20px;
-
-    margin-bottom: 45px;
-  }
-  th, td {
-    border: 1px solid black;
-      padding: 8px;
-      text-align: left;
-  }
-  input {
-    height: 30px;
-    caret-color: #a072d5;
-    border-radius: 5px;
-    padding-left: 10px;
-  }
-  .container {
-    width: 90%;
-    clear: both;
-    margin: auto;
-  }
-  
-  .container input {
-    width: 90%;
-    clear: both;
-  }
-  .form-box {
-    padding: 10px;
-    margin-bottom: 20px;
-  }
-  input[type="radio"] {
-    height: auto;
-  }
-  
-  fieldset {
-    display: block;
-    margin: auto;
-    background-color: #FAFAFF;
-    border-radius: 5px;
-  }
-  fieldset div {
-    max-width: 100%;
-    padding: 8px;
-  }
-  input[type="submit"] {
-    color: #140a1f;
-    font-family: "Fenix", serif;
-  }
-   
-  #submitBtn {
-    display: block;
-    margin-right: auto;
-    margin-left: auto;
-    background-color: #fff;
-    font-family: "Fenix", serif;
-    color: #000000;
-  }
-  #submitBtn:hover,
-  #submitBtn:focus, nav button:hover, nav a:hover {
-    background-color: #d8341e;
-    color: #fffcf7;
-  }
-  textarea {
-    padding: 10px;
-    margin-top: 5px;
-    width: 95%;
-  }
-  
-  nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  nav ul li a {
-    display: block;
-    text-align: center;
-    padding: 0.8rem 2%;
-    text-decoration: none;
-    color: #000000;
-    font-size: 20px;
-  }
-  nav ul.hide {
-    display: none;
-  }
-  .tablepress {
-    border: #000000;
-    font-size: 14px;
-    margin: auto;
-    max-width: 500px;
-  }
-  .tablepress .odd td {
-    background-color: #f5eaea;
+  background-color: #fafaffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  max-width: 990px;
+  letter-spacing: 0.3rem;
+  font-size: 30px;
+  margin: 0 auto;
 }
-.tablepress td, .tablepress th {
+.headings {
+  position: absolute;
+  text-align: center;
+  text-shadow: 30px 2px 20px #fafaffff;
+}
+#headLogo {
+  max-width: 60%;
+}
+header:hover #headLogo {
+  transform: rotate(360deg);
+  transition-duration: 5s;
+}
+#togglebtn {
+  margin-top: 60px;
+  font-size: 30px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+#top {
+  margin-top: 30px;
+}
+#top p {
+  font-size: 20px;
+  text-align: center;
+  max-width: 70%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+form,
+#display,
+#apotd {
+  background-color: #fafaffff;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  box-shadow: 0 0 30px #30343fff;
+  font-size: 20px;
+
+  margin-bottom: 45px;
+}
+th,
+td {
+  border: 1px solid #273469ff;
+  padding: 8px;
+  text-align: left;
+}
+input {
+  height: 30px;
+  caret-color: #273469ff;
+  border-radius: 5px;
+  padding-left: 10px;
+}
+.container {
+  width: 90%;
+  clear: both;
+  margin: auto;
+}
+
+.container input {
+  width: 90%;
+  clear: both;
+}
+.form-box {
+  padding: 10px;
+  margin-bottom: 20px;
+}
+input[type="radio"] {
+  height: auto;
+}
+
+fieldset {
+  display: block;
+  margin: auto;
+  background-color: #fafaffff;
+  border-radius: 5px;
+}
+fieldset div {
+  max-width: 100%;
+  padding: 8px;
+}
+
+#submitBtn {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: #fff;
+  font-family: "PT Sans", sans-serif;
+  color: #000;
+}
+#submitBtn:hover,
+#submitBtn:focus,
+nav button:hover,
+nav a:hover {
+  background-color: #d8341e;
+  color: fafaffff;
+}
+textarea {
+  padding: 10px;
+  margin-top: 5px;
+  width: 95%;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+nav ul li a {
+  display: block;
+  text-align: center;
+  padding: 0.8rem 2%;
+  text-decoration: none;
+  color: #000;
+  font-size: 20px;
+}
+nav ul.hide {
+  display: none;
+}
+.tablepress {
+  font-size: 14px;
+  margin: auto;
+  max-width: 500px;
+}
+.tablepress .odd td {
+  background-color: rgb(211, 212, 214);
+}
+.tablepress td,
+.tablepress th {
   padding: 4px;
 }
 img {
@@ -159,12 +171,12 @@ img {
   color: rgb(129, 3, 3);
 }
 
-p.info{
-  margin:0px;
+p.info {
+  margin: 0px;
 }
 
 p.info:hover span {
-  display:block;
+  display: block;
   z-index: 99;
 }
 span.hide {
@@ -180,5 +192,22 @@ span.hide {
   display: none;
 }
 #back {
-  background-color: #a072d5;
+  background-color: #d8341e;
+}
+
+body {
+  padding: 2px 0 0 2px;
+}
+
+.gallery img {
+  float: left;
+  padding: 0 2px 2px 0;
+  /* Yes, you *can* adjust/remove padding. */
+}
+
+#pic {
+  max-width: 30%;
+}
+input:invalid {
+  box-shadow: 0 0 5px 1px red;
 }

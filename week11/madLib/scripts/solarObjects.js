@@ -2,8 +2,6 @@ import { fetchJSON } from "./fetchJSON.js";
 
 const url = "https://api.le-systeme-solaire.net/rest/bodies/";
 
-fetchJSON(url);
-
 const json = await fetchJSON(url);
 table(json);
 document.querySelector("#togglebtn").addEventListener("click", toggleMenu);
