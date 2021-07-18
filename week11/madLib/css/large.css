@@ -4,6 +4,8 @@ header {
     max-width: 588px;
 }
 
-
+.imgs {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
 }

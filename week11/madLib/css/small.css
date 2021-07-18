@@ -40,7 +40,7 @@ header:hover #headLogo {
   transition-duration: 5s;
 }
 #togglebtn {
-  margin-top: 40px;
+  margin-top: 65px;
   font-size: 30px;
   display: block;
   margin-left: auto;
@@ -220,4 +220,49 @@ footer {
 }
 #currentdate {
   padding-top: 10px;
+}
+
+:root {
+  /* Set fade in duration */
+  --fade-time: 0.5s;
+}
+
+
+
+.container {
+  max-width: 90%;
+  margin: auto;
+  border: #000 solid 3px;
+  background: #fff;
+}
+
+.main-img img,
+.imgs img {
+  width: 100%;
+}
+
+.imgs {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 5px;
+}
+
+.imgs img {
+  cursor: pointer;
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn var(--fade-time) ease-in 1 forwards;
+}
+
+div ul {
+  font-size: 20px;
 }
