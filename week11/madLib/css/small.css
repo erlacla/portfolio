@@ -11,7 +11,8 @@ h2 {
 p,
 div,
 form,
-.tablepress {
+.tablepress,
+footer span {
   font-family: "PT Sans", sans-serif;
   margin: 20px;
   color: #000;
@@ -72,6 +73,7 @@ td {
   border: 1px solid #273469ff;
   padding: 8px;
   text-align: left;
+  font-family: "PT Sans", sans-serif;
 }
 input {
   height: 30px;
@@ -161,6 +163,7 @@ img {
   display: block;
   margin: auto;
   max-width: 80%;
+  padding: 20px;
 }
 .info {
   display: inline;
