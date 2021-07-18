@@ -229,8 +229,8 @@ footer {
 
 
 
-.container {
-  max-width: 90%;
+.galcontainer {
+  max-width: 50%;
   margin: auto;
   border: #000 solid 3px;
   background: #fff;
