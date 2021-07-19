@@ -51,6 +51,10 @@ const links = [
   label: "Week 13",
   url: "week13/index.html",
 },
+{
+  label: "Week 14",
+  url: "week14/index.html",
+},
 ];
 
 let i = 0;
