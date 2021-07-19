@@ -53,3 +53,13 @@ function imgClick(e) {
   // Change the opacity to opacity var
   e.target.style.opacity = opacity;
 }
+
+const today = new Date();
+let currentDay = new Intl.DateTimeFormat("en-US", { dateStyle: "full" }).format(
+  today
+);
+let date = document.querySelector("#currentdate");
+date.textContent = currentDay;
+
+
+

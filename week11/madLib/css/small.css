@@ -147,6 +147,10 @@ nav ul li a {
 nav ul.hide {
   display: none;
 }
+table {
+  margin: 20px;
+}
+
 .tablepress {
   font-size: 14px;
   margin: auto;
