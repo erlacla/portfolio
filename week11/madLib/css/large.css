@@ -3,9 +3,12 @@
 header {
     max-width: 588px;
 }
-
-.imgs {
-    grid-template-columns: repeat(2, 1fr);
+  .galcontainer {
+    max-width: 50%;
   }
+
+  #pic {
+    max-width: 30%;
+}
 
 }
