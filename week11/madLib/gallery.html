@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Solar MadLib Gallery</title>
   <meta name="description" content="Astronomy and English learning combine in a fun game of MadLib!" />
   <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon" />
@@ -18,7 +19,7 @@
 <body>
   <header>
     <img id="headLogo" src="images/logo500.jpg" sizes="100vw" srcset="
-        images/hero200.png 200w,
+        images/logo200.jpg 200w,
         images/logo500.jpg 500w
       " alt="Solar MadLib Logo" />
     <section class="headings">
@@ -31,10 +32,7 @@
     <ul id="nav" class="hide">
       <li><a href="index.html" id="active">Home</a></li>
       <li>
-        <a href="#">Another MadLib</a>
-      </li>
-      <li>
-        <a href="#">Solar Objects</a>
+        <a href="solarObjects.html">Solar Objects</a>
       </li>
       <li>
         <a href="gallery.html">Solar Gallery</a>
@@ -43,8 +41,7 @@
   </nav>
 
   <main>
-<a href="https://apod.nasa.gov/apod/astropix.html">NASA Astronomy Picture Of The Day</a>
-    
+
     <div id="apotd">
       <h1>NASA Astronomy Picture Of The Day</h1>
       <h2 id="title"></h2>
@@ -53,95 +50,98 @@
       <p id="explanation"></p>
     </div>
 
-    <div class="galcontainer">
+    <div class="galcontainer" id="anchor">
       <div class="main-img">
         <img src="images/galaxy.jpg" id="current" alt="current picture">
       </div>
-    
+
+
+
+      <div class="imgs">
+        <a href="#anchor"><img src="images/galaxy.jpg" alt="galaxy"></a>
+        <a href="#anchor"><img src="images/earth.jpg" alt="earth from space"></a>
+        <a href="#anchor"><img src="images/sun.jpg" alt="sun"></a>
+        <a href="#anchor"><img src="images/nebula.jpg" alt="nebula"></a>
+        <a href="#anchor"><img src="images/neptune.jpg" alt="neptune"></a>
+        <a href="#anchor"><img src="images/astronaut.jpg" alt="astronaut on moon"></a>
+        <a href="#anchor"><img src="images/milkyway.jpg" alt="milkyway galaxy"></a>
+        <a href="#anchor"><img src="images/butterflyGalaxy.jpg" alt="butterfly galaxy"></a>
+      </div>
+    </div>
+      <br><br>
       
+        <ul id="facts">10 Crazy Facts You Didn't Know About Space:
+          <li> 1. Space is completely silent
 
-    <div class="imgs">
-      <img src="images/galaxy.jpg" alt="galaxy">
-      <img src="images/earth.jpg" alt="earth from space">
-      <img src="images/sun.jpg" alt="sun">
-      <img src="images/nebula.jpg" alt="nebula">
-      <img src="images/neptune.jpg" alt="neptune">
-      <img src="images/astronaut.jpg" alt="astronaut on moon">
-      <img src="images/milkyway.jpg" alt="milkyway galaxy">
-      <img src="images/butterflyGalaxy.jpg" alt="butterfly galaxy">
-    </div>
+            There is no atmosphere in space, which means that sound has no medium or way to travel to be heard.
+          </li>
+          <li> 2. The hottest planet in our solar system is 450° c.
 
-    <br><br>
-    <div>
-      <ul>10 Crazy Facts You Didn't Know About Space:
-        <li> 1. Space is completely silent
+            Venus is the hottest planet in the solar system and has an average surface temperature of around 450° c. Did
+            you know that venus isn't the closest planet to the sun? That is mercury. You would think that mercury would
+            then be the hottest, but mercury has no atmosphere (which regulates temperature), resulting in big
+            fluctuations.
+          </li>
+          <li> 3. A full nasa space suit costs $12,000,000.
 
-          There is no atmosphere in space, which means that sound has no medium or way to travel to be heard.
-        </li>
-        <li> 2. The hottest planet in our solar system is 450° c.
+            While the entire suit costs a cool $12m, 70% of that cost is for the backpack and control module. However,
+            the
+            space suits that nasa uses were built in 1974. If these were priced by today's pricing, they would cost an
+            estimated 150 million dollars!
+          </li>
+          <li> 4. The sun’s mass takes up 99.86% of the solar system.
 
-          Venus is the hottest planet in the solar system and has an average surface temperature of around 450° c. Did
-          you know that venus isn't the closest planet to the sun? That is mercury. You would think that mercury would
-          then be the hottest, but mercury has no atmosphere (which regulates temperature), resulting in big
-          fluctuations.
-        </li>
-        <li> 3. A full nasa space suit costs $12,000,000.
+            The sun accounts for 99.86% of the mass in our solar system with a mass of around 330,000 times that of
+            earth.
+            Did you know that the sun is made up of mostly hydrogen (three quarters worth) with the rest of its mass
+            attributed to helium. If the sun had a voice would it be high and squeaky from all that helium?
+          </li>
+          <li> 5. One million earths can fit inside the sun
 
-          While the entire suit costs a cool $12m, 70% of that cost is for the backpack and control module. However, the
-          space suits that nasa uses were built in 1974. If these were priced by today's pricing, they would cost an
-          estimated 150 million dollars!
-        </li>
-        <li> 4. The sun’s mass takes up 99.86% of the solar system.
+            The sun is large enough that approximately 1.3 million earths could fit inside (if squashed in) or if the
+            earths retained their spherical shape then 960,000 would fit. But can you visualise that number of earths?
+          </li>
+          <li> 6. There are more trees on earth than stars in the milky way
 
-          The sun accounts for 99.86% of the mass in our solar system with a mass of around 330,000 times that of earth.
-          Did you know that the sun is made up of mostly hydrogen (three quarters worth) with the rest of its mass
-          attributed to helium. If the sun had a voice would it be high and squeaky from all that helium?
-        </li>
-        <li> 5. One million earths can fit inside the sun
-
-          The sun is large enough that approximately 1.3 million earths could fit inside (if squashed in) or if the
-          earths retained their spherical shape then 960,000 would fit. But can you visualise that number of earths?
-        </li>
-        <li> 6. There are more trees on earth than stars in the milky way
-
-          There are about three trillion trees on planet earth, and between 100-400 billion stars, approximately, in the
-          galaxy.
-        </li>
-        <li> 7. The sunset on mars appears blue
-          Just as colors are made more dramatic in sunsets on earth, sunsets on mars, according to nasa, would appear
-          bluish to human observers watching from the red planet. Fine dust makes the blue near the sun's part of the
-          sky much more visibilke, while normal daylight makes the red planet's familiar rusty dust color the most
-          perceptible to the human eye.
-        </li>
-        <li> 8. There are more stars in the universe than grains of sands on earth
-          The universe extends far beyond our own galaxy, the milky way, which is why scientists can only estimate how
-          many stars are in space. However, scientists estimate the universe contains approximately
-          1,000,000,000,000,000,000,000,000 stars, or a septillion. While no one can actually count every single grain
-          of sand on the earth, the estimated total from researchers at the university of hawaii, is somewhere around
-          seven quintillion, five hundred quadrillion grains. That is an awfully big sand castle!
-        </li>
-        <li> 9. One day on venus is longer than one year.
-          Venus has a slow axis rotation which takes 243 earth days to complete its day. The orbit of venus around the
-          sun is 225 earth days, making a year on venus 18 days less than a day on venus.
-        </li>
-        <li> 10. There is a planet made of diamonds
-          There’s a planet made of diamonds twice the size of earth the "super earth," aka 55 cancri e, is most likely
-          covered in graphite and diamond. Paying a visit to that planet would probably pay for the $12 million dollar
-          space suit needed to get there!
-        </li>
-      </ul>
-    </div>
+            There are about three trillion trees on planet earth, and between 100-400 billion stars, approximately, in
+            the
+            galaxy.
+          </li>
+          <li> 7. The sunset on mars appears blue
+            Just as colors are made more dramatic in sunsets on earth, sunsets on mars, according to nasa, would appear
+            bluish to human observers watching from the red planet. Fine dust makes the blue near the sun's part of the
+            sky much more visibilke, while normal daylight makes the red planet's familiar rusty dust color the most
+            perceptible to the human eye.
+          </li>
+          <li> 8. There are more stars in the universe than grains of sands on earth
+            The universe extends far beyond our own galaxy, the milky way, which is why scientists can only estimate how
+            many stars are in space. However, scientists estimate the universe contains approximately
+            1,000,000,000,000,000,000,000,000 stars, or a septillion. While no one can actually count every single grain
+            of sand on the earth, the estimated total from researchers at the university of hawaii, is somewhere around
+            seven quintillion, five hundred quadrillion grains. That is an awfully big sand castle!
+          </li>
+          <li> 9. One day on venus is longer than one year.
+            Venus has a slow axis rotation which takes 243 earth days to complete its day. The orbit of venus around the
+            sun is 225 earth days, making a year on venus 18 days less than a day on venus.
+          </li>
+          <li> 10. There is a planet made of diamonds
+            There’s a planet made of diamonds twice the size of earth the "super earth," aka 55 cancri e, is most likely
+            covered in graphite and diamond. Paying a visit to that planet would probably pay for the $12 million dollar
+            space suit needed to get there!
+          </li>
+        </ul>
+      
 
 
   </main>
   <footer>
-      
-        <span id="currentdate"></span>
-        <p>Space Facts from <a href="https://childwellbeing.asu.edu/SpaceFacts"> ASU.edu</a></p>
-        <p>Photos from <a href="https://unsplash.com/">Unsplash.com</a></p> 
-        <p>Gallery display credit <a href="https://codepen.io/bradtraversy/pen/zpeyBv">Brad Traversy</a> </p> 
-      </section>
-    </footer>
+
+    <span id="currentdate"></span>
+    <p>Space Facts from <a href="https://childwellbeing.asu.edu/SpaceFacts"> ASU.edu</a></p>
+    <p>Photos from <a href="https://unsplash.com/">Unsplash.com</a></p>
+    <p>Gallery display credit <a href="https://codepen.io/bradtraversy/pen/zpeyBv">Brad Traversy</a> </p>
+    </section>
+  </footer>
 
   <script src="scripts/gallery.js"></script>
 

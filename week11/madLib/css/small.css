@@ -123,7 +123,7 @@ fieldset div {
 nav button:hover,
 nav a:hover {
   background-color: #d8341e;
-  color: fafaffff;
+  color: #fff;
 }
 textarea {
   padding: 10px;
@@ -202,7 +202,6 @@ body {
 .gallery img {
   float: left;
   padding: 0 2px 2px 0;
-  /* Yes, you *can* adjust/remove padding. */
 }
 
 #pic {
@@ -216,10 +215,10 @@ footer {
   padding: 30px;
   border-top: 2px solid #000;
   display: block;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    max-width: 100%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  max-width: 100%;
 }
 #currentdate {
   padding-top: 10px;
@@ -230,20 +229,18 @@ footer {
   --fade-time: 0.5s;
 }
 
-
-
 .galcontainer {
-  max-width: 50%;
+  max-width: 80%;
   margin: auto;
   border: #000 solid 3px;
-  background: #fff;
 }
 
-.main-img img,
-.imgs img {
+.main-img img {
   width: 100%;
 }
-
+.imgs img {
+  width: 50%;
+}
 .imgs {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -254,7 +251,6 @@ footer {
   cursor: pointer;
 }
 
-/* Fade in animation */
 @keyframes fadeIn {
   to {
     opacity: 1;
@@ -265,7 +261,11 @@ footer {
   opacity: 0;
   animation: fadeIn var(--fade-time) ease-in 1 forwards;
 }
-
-div ul {
+ul#facts,
+div ul,
+#facts li {
+  padding: 20px;
   font-size: 20px;
+  font-family: "PT Sans", sans-serif;
+  margin: 20px;
 }
