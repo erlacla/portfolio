@@ -8,9 +8,7 @@ function toggleMenu() {
   document.querySelector("#nav").classList.toggle("hide");
 }
 
-
 const json = await fetchJSON(url);
-
 
 function toggleForm() {
   document.querySelector(".container").classList.toggle("hide");
@@ -18,7 +16,7 @@ function toggleForm() {
 
 function reload() {
   location.reload();
-    return false;
+  return false;
 }
 
 const form = document.getElementById("madLib");
@@ -26,7 +24,6 @@ form.addEventListener("submit", (e) => {
   e.preventDefault();
   toggleForm();
   document.querySelector("#display").classList.toggle("hide");
-  
 
   let girlsName = form.querySelector("#g-name").value;
   let boysName = form.querySelector("#b-name").value;
@@ -87,9 +84,9 @@ form.addEventListener("submit", (e) => {
   let backButton = document.createElement("button");
   backButton.setAttribute("id", "back");
   backButton.innerHTML = "Try again";
-  
-section.appendChild(backButton);
-document.querySelector("#back").addEventListener("click", reload);
+
+  section.appendChild(backButton);
+  document.querySelector("#back").addEventListener("click", reload);
   document.querySelector("#back").addEventListener("touchend", reload);
 });
 
@@ -99,5 +96,3 @@ let currentDay = new Intl.DateTimeFormat("en-US", { dateStyle: "full" }).format(
 );
 let date = document.querySelector("#currentdate");
 date.textContent = currentDay;
-
-
