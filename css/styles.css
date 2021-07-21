@@ -228,12 +228,16 @@ input:valid {
   box-shadow: 4px 2px 5px black;
   word-wrap: break-word;
 }
-#reverse {
+#fix {
   text-align: left;
   margin: auto;
 }
 #padding {
-  margin-left: 20px;
+  margin: 40px;
+}
+#output {
+  font-size: 20px;
+  font-weight: bold;
 }
 .center a {
   display: block;
