@@ -228,7 +228,13 @@ input:valid {
   box-shadow: 4px 2px 5px black;
   word-wrap: break-word;
 }
-
+#reverse {
+  text-align: left;
+  margin: auto;
+}
+#padding {
+  margin-left: 20px;
+}
 .center a {
   display: block;
   text-align: center;
